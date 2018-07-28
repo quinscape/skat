@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml" />
+    <logger name="de.fforw" level="DEBUG"/>
+    <logger name="org.apache.commons.beanutils" level="INFO"/>
+</configuration>

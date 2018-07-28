@@ -1,0 +1,46 @@
+{
+    "presets": [
+        "es2015",
+        "react"
+    ],
+    "plugins": [
+        "transform-class-properties",
+        "transform-object-rest-spread",
+        "syntax-dynamic-import",
+        [
+            "track-usage",
+            {
+                "sourceRoot": "src/main/js/",
+                "trackedFunctions": {
+                    "i18n": {
+                        "module": "./services/i18n",
+                        "fn": "",
+                        "varArgs": true
+                    }
+                },
+                "debug": false
+            }
+        ]
+    ],
+    "env": {
+        "test": {
+            "plugins": [
+                "babel-plugin-espower"
+            ]
+        },
+        "production": {
+            "plugins": [
+                [
+                    "transform-imports", {
+                    "reactstrap": {
+                        "transform": "reactstrap/lib/${member}",
+                        "preventFullImport": true
+                    }
+                }
+                ],
+                "transform-react-remove-prop-types"
+            ]
+        }
+    }
+}
+

@@ -1,0 +1,10 @@
+/* prevent links/buttons from being invisible in active list-group-items */
+ul.list-group li.active a
+{
+    color: #d6e9ff;
+}
+ul.list-group li.active button
+{
+    color: #000;
+}
+
