@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux"
 
 import {
     Route,
@@ -6,21 +7,16 @@ import {
 } from "react-router-dom"
 
 import { ConnectedRouter } from "connected-react-router"
-import {
-    Collapse,
-    Container,
-    Nav,
-    Navbar,
-    NavbarBrand,
-    NavbarToggler,
-    NavItem,
-} from "reactstrap"
+import { Container, } from "reactstrap"
 
 import About from "./routes/About";
-import Home from "./routes/Home";
+import Lobby from "./routes/Lobby";
 import Game from "./routes/Game";
-import Admin from "./routes/Admin";
 import LogoutForm from "../components/LogoutForm";
+// noinspection ES6UnusedImports
+import GAME_CSS from "./game.css"
+import { } from "./reducers";
+import { flushGames } from "./actions";
 
 
 class SkatCardsGame extends React.Component {
@@ -33,38 +29,27 @@ class SkatCardsGame extends React.Component {
 
     render()
     {
-        const {store, history} = this.props;
-        const { foos, isNavExpanded } = this.state;
+        const {store, history, flushGames } = this.props;
 
         return (
             <ConnectedRouter history={ history }>
-                <Container fluid={ false }>
-                    <Navbar color="dark" dark expand="md">
-
-                        <NavbarBrand href="/">
-                            Skat-Cards
-                        </NavbarBrand>
-                        <NavbarToggler onClick={ this.toggle }/>
-                        <Collapse isOpen={ isNavExpanded } navbar>
-                            <Nav className="ml-auto" navbar>
-                                <NavItem>
-                                    <a
-                                        className="btn nav-link"
-                                        href={ "/admin/" }
-                                    >
-                                        Admin
-                                    </a>
-                                </NavItem>
-                            </Nav>
-                        </Collapse>
-                    </Navbar>
-                    <Switch>
-                        <Route exact path="/game/" component={ Home }/>
-                        <Route path="/game/:id:/" component={ Game }/>
-                        <Route path="/game/about" component={ About }/>
-                    </Switch>
+                <Container fluid={ true }>
+                        <Switch>
+                            <Route exact path="/game/:id" component={ Game }/>
+                            <Route path="/game/about" component={ About }/>
+                            <Route exact path="/game/" component={ Lobby }/>
+                        </Switch>
                     <hr/>
-                    <div>
+                    <div id="footer" className="clearfix">
+                        <button
+                            type="button"
+                            className="btn btn-link"
+                            onClick={ flushGames }
+                        >
+                            <strong>
+                                DEBUG: Flush Games
+                            </strong>
+                        </button>
                         <LogoutForm/>
                     </div>
 
@@ -75,5 +60,18 @@ class SkatCardsGame extends React.Component {
 }
 
 
-export default SkatCardsGame
+const mapStateToProps = state => {
+    return {
+    }
+};
+
+const mapDispatchToProps = ({
+    flushGames
+});
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(SkatCardsGame)
+
 

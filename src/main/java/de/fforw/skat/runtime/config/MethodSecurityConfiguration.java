@@ -14,7 +14,7 @@ public class MethodSecurityConfiguration
     protected MethodSecurityExpressionHandler createExpressionHandler()
     {
         DefaultMethodSecurityExpressionHandler expressionHandler = new DefaultMethodSecurityExpressionHandler();
-        expressionHandler.setPermissionEvaluator(new OwnerPermissionEvaluator());
+        expressionHandler.setPermissionEvaluator(new SkatGamePermissionEvaluator());
         return expressionHandler;
     }
 }

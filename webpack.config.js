@@ -20,8 +20,8 @@ if (!fs.existsSync(JS_OUTPUT_DIRECTORY))
 module.exports = {
     mode: process.env.NODE_ENV,
     entry: {
-        game: "./src/main/js/game/index.js",
-        admin: "./src/main/js/admin/index.js",
+        game: "./src/main/js/game/game.js",
+        admin: "./src/main/js/admin/admin.js",
         login: "./src/main/js/login.js"
     },
 
@@ -71,6 +71,13 @@ module.exports = {
                 test: /\.css$/,
                 exclude: /node_modules/,
                 use: [ MiniCssExtractPlugin.loader, "css-loader" ]
+            },
+
+            {
+                test: /\.svg/,
+                use: {
+                    loader: "symbol-loader"
+                }
             }
         ]
     },

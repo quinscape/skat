@@ -1,63 +1,39 @@
 import {
-    FOO_SET_LIST,
-    FOO_UPDATE_DETAIL
+    GAME_ACTIVATE
 } from "../actions";
 
 const INITIAL_STATE = {
-    // list of reduced foos (only a few properties populated)
-    foos: [],
-
-    // current foo detail object
-    fooDetail: null,
-
-    // Current nummber of available foos
-    rowCount: 0
+    gameList: {
+        channels: [],
+        rowCount: 0
+    }
 };
 
 export default function(state = INITIAL_STATE, action)
 {
+    console.log(action);
+
     switch (action.type)
     {
-        case FOO_SET_LIST:
-        {
-            const { foos, rowCount } = action;
-
+        case GAME_ACTIVATE:
             return {
                 ... state,
-                foos,
-                rowCount
+                current: action.skatGame
             }
-        }
-        case FOO_UPDATE_DETAIL:
-        {
-            const { foo } = action;
-
-            return {
-                ... state,
-                fooDetail : foo
-            }
-        }
     }
 
     return state;
 }
 
 
-
-export function getFoos(state)
+export function getGameList(state)
 {
-    return state.foos;
+    return state.gameList;
 }
 
-
-
-export function getFooDetail(state)
+export function getCurrentGame(state)
 {
-    return state.fooDetail;
+    return state.current;
 }
 
-export function getFooRowCount(state)
-{
-    return state.rowCount;
-}
 

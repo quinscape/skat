@@ -18,13 +18,22 @@ export function defaultErrorHandler(errors)
  * @param {String} params.query         query string
  * @param {Object} [params.variables]   query variables
  *
- * @returns {Promise<any>} Promise resolving to query data
+ * @returns {Promise<Object>} Promise resolving to query data
  */
 export default function (params) {
 
     //console.log("QUERY: ", params);
 
-    const { csrfToken, contextPath } = config();
+    const { csrfToken, contextPath, windowId } = config();
+
+
+    if (params.query.indexOf("$windowId") > 0)
+    {
+        params.variables = {
+            ... params.variables,
+            windowId
+        };
+    }
 
     return fetch(
             window.location.origin + contextPath + "/graphql",
@@ -47,6 +56,7 @@ export default function (params) {
                 {
                     return  Promise.reject(errors);
                 }
+
                 return data;
             }
         );
