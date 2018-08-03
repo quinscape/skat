@@ -28,10 +28,7 @@ class Lobby extends React.Component {
         if (gameList.rowCount === 0)
         {
             const name = randomName();
-            this.props.createGame(name).then( () => {
-                console.log("createGame finished")
-                return joinGame(name);
-            });
+            this.props.createGame(name);
         }
         else
         {
@@ -91,6 +88,10 @@ class Lobby extends React.Component {
                                             skatGame.id
                                         }
                                         </button>
+                                        <div className="fa-pull-right">
+                                            { skatGame.users.length } Users
+                                            { skatGame.gameInProgress && ", game in progress"}
+                                        </div>
 
                                     </ListGroupItem>
                                     )

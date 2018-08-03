@@ -1,10 +1,18 @@
 package de.fforw.skat.runtime.service;
 
-import de.fforw.skat.domain.model.channel.Channel;
-import de.fforw.skat.domain.model.channel.ChannelListing;
-import de.fforw.skat.domain.model.channel.ChannelListings;
-import de.fforw.skat.domain.model.GameRound;
+import de.fforw.skat.model.GamePhase;
+import de.fforw.skat.model.GameRound;
+import de.fforw.skat.model.GameUser;
+import de.fforw.skat.model.GameUserType;
+import de.fforw.skat.model.channel.Channel;
+import de.fforw.skat.model.channel.ChannelListing;
+import de.fforw.skat.model.channel.ChannelListings;
+import de.fforw.skat.runtime.ChannelComparator;
+import de.fforw.skat.runtime.HandFetcher;
 import de.fforw.skat.runtime.config.AppAuthentication;
+import de.fforw.skat.runtime.message.PreparedMessages;
+import de.fforw.skat.ws.SkatClientConnection;
+import de.fforw.skat.ws.SkatWebSocketHandler;
 import de.quinscape.domainql.annotation.GraphQLField;
 import de.quinscape.domainql.annotation.GraphQLLogic;
 import de.quinscape.domainql.annotation.GraphQLMutation;
@@ -14,6 +22,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -30,27 +39,41 @@ public class SkatGameLogic
 
     private final Random random;
 
+    private final SkatWebSocketHandler skatWebSocketHandler;
+
 
     @Autowired
     public SkatGameLogic(
         DSLContext dslContext,
         GameRepository gameRepository,
-        Random random
+        Random random,
+        SkatWebSocketHandler skatWebSocketHandler
     )
     {
         this.dslContext = dslContext;
         this.gameRepository = gameRepository;
         this.random = random;
-
+        this.skatWebSocketHandler = skatWebSocketHandler;
     }
 
 
+    /**
+     * the websocket channel updates are routed through this to provide the same authentication related view on
+     * the current channel.
+     *
+     * @param channel channel input object
+     * @return
+     */
     @GraphQLQuery
-    public Channel skateGame(String id)
+    public Channel filterChannel(Channel channel)
     {
-        log.debug("skateGame({})", id);
-
-        return gameRepository.getGameById(id);
+        /**
+         *  just output, the auth logic is in the specialized fetchers
+         *
+         * @see GameRound#getInitialStack()
+         * @see GameRound#getHand()
+         */
+        return channel;
     }
 
 
@@ -71,6 +94,9 @@ public class SkatGameLogic
 
         channelListings.setRowCount(rowCount);
 
+        channels.sort(new ChannelComparator());
+
+
         if (rowCount > limit)
         {
             channelListings.setChannels(channels.subList(offset, offset + limit));
@@ -85,9 +111,11 @@ public class SkatGameLogic
 
 
     @GraphQLMutation
-    public Channel createGame(String secret, String windowId, boolean isPublic)
+    public Channel createGame(SkatClientConnection conn, String secret, boolean isPublic)
     {
-        log.debug("createGame(secret = {}, windowId = {}, isPublic = {})", secret, windowId, isPublic);
+        final String connectionId = conn.getConnectionId();
+
+        log.debug("createGame(secret = {}, connectionId = {}, isPublic = {})", secret, connectionId, isPublic);
 
         Channel channel = new Channel(secret);
         channel.setPublic(isPublic);
@@ -95,48 +123,150 @@ public class SkatGameLogic
 
         final AppAuthentication auth = AppAuthentication.current();
 
-        final String userName = getUserName(secret, windowId, auth);
-
-        gameRound.setSeating(Collections.singletonList(userName));
         channel.setCurrent(gameRound);
         final ArrayList<String> owners = new ArrayList<>();
         owners.add(auth.getLogin());
         channel.setOwners(owners);
 
-        gameRepository.updateGame(channel);
+        gameRepository.updateChannel(channel);
 
         return channel;
     }
 
 
     @GraphQLMutation
-    public Channel joinGame(String secret, String windowId)
+    public Channel joinGame(SkatClientConnection conn, String secret)
     {
-        log.debug("joinGame(secret = {}, windowId = {})", secret, windowId);
 
-        final AppAuthentication current = AppAuthentication.current();
-        Channel game = gameRepository.getGameById(secret);
+        final String connectionId = conn.getConnectionId();
 
-        if (game == null)
+        log.debug("joinGame(secret = {}, connectionId = {})", secret, connectionId);
+
+        final AppAuthentication auth = AppAuthentication.current();
+        Channel channel = gameRepository.getChannelById(secret);
+
+        if (channel == null)
         {
-            game = new Channel(secret);
+            throw new IllegalStateException("Channel '" + secret + "' does not exist");
         }
 
-
-        List<String> users = game.getUsers();
-        if (users == null)
+        PreparedMessages preparedMessages = null;
+        synchronized (channel)
         {
-            users = new ArrayList<>();
-            game.setUsers(users);
+
+            final List<GameUser> users = channel.getUsers();
+            final List<GameUser> seating = channel.getCurrent().getSeating();
+            if (
+                users.stream().noneMatch(
+                    u -> u.getConnectionId().equals(connectionId)
+                )
+            )
+            {
+                final GameUser newUser = GameUser.fromAuth(auth, connectionId);
+
+                final GameRound current = channel.getCurrent();
+                if (current.getPhase() == GamePhase.OPEN)
+                {
+                    boolean replaced = false;
+                    for (int i = 0; i < users.size(); i++)
+                    {
+                        GameUser currentUser = users.get(i);
+
+                        // if the current user is inactive and equal to us
+                        final boolean currentIsTest = currentUser.getType() == GameUserType.TEST_USER;
+                        final boolean newIsTest = newUser.getType() == GameUserType.TEST_USER;
+                        if (
+                            !currentUser.isActive() && (
+                                currentUser.equals(newUser) || (currentIsTest && newIsTest)
+                            )
+                        )
+                        {
+                            // we replace them in "users"..
+                            users.set(i, newUser);
+
+                            // .. and replace them by name in seating, too.
+                            for (int j = 0; j < seating.size(); j++)
+                            {
+                                GameUser currentSeat = seating.get(j);
+                                if (currentSeat.getName().equals(currentUser.getName()))
+                                {
+                                    seating.set(j, newUser);
+                                    break;
+                                }
+                            }
+                            replaced = true;
+                            break;
+                        }
+                    }
+
+                    if (!replaced)
+                    {
+                        users.add(
+                            newUser
+                        );
+
+                        final int nullPos = seating.indexOf(null);
+                        if (nullPos >= 0)
+                        {
+                            log.debug("Replace null user at #", nullPos);
+                            seating.set(nullPos, newUser);
+                        }
+                        else if (seating.size() < current.getNumberOfSeats())
+                        {
+                            log.debug("Add user");
+                            seating.add(newUser);
+                        }
+                    }
+
+                    current.setLastUpdated(Instant.now().toString());
+
+                    preparedMessages = channel.prepareUpdate(newUser, newUser.getName() + " joined the channel");
+                }
+            }
+            gameRepository.updateChannel(channel);
         }
 
-        users.add(
-            getUserName(secret, windowId)
-        );
+        if (preparedMessages != null)
+        {
+            preparedMessages.sendAll(skatWebSocketHandler);
+        }
 
-        gameRepository.updateGame(game);
+        return channel;
+    }
 
-        return game;
+
+    @GraphQLMutation
+    public boolean reshuffle(SkatClientConnection conn, String secret)
+    {
+
+        final Channel channel = gameRepository.getChannelById(secret);
+        final String connectionId = conn.getConnectionId();
+
+        final GameRound current = channel.getCurrent();
+        final int seatIndex = HandFetcher.findSeatByConnection(current.getSeating(), connectionId);
+
+        final int currentPosition;
+
+        if (current.getPhase() != GamePhase.OPEN || seatIndex < 0 || (currentPosition = HandFetcher.getCurrentPosition(
+            seatIndex, current.getCurrentDealer(), current.getNumberOfSeats())) != 0)
+        {
+            return false;
+        }
+
+        final ArrayList<Integer> newStack = new ArrayList<>(current.getInitialStackInternal());
+        Collections.shuffle(newStack, random);
+
+        PreparedMessages preparedMessages = null;
+        synchronized (channel)
+        {
+            current.setInitialStack(newStack);
+            current.setLastUpdated(Instant.now().toString());
+            preparedMessages = channel.prepareUpdate(null, "*shuffling*");
+            gameRepository.updateChannel(channel);
+        }
+
+        preparedMessages.sendAll(skatWebSocketHandler);
+        return true;
     }
 
 
@@ -146,20 +276,5 @@ public class SkatGameLogic
         gameRepository.flush();
 
         return true;
-    }
-
-
-    private String getUserName(String secret, String windowId)
-    {
-        final AppAuthentication current = AppAuthentication.current();
-        return getUserName(secret, windowId, current);
-    }
-
-
-    private String getUserName(String secret, String windowId, AppAuthentication auth)
-    {
-        return auth.getRoles().contains("ROLE_TEST") ?
-            secret + ":" + windowId :
-            secret;
     }
 }

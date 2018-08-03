@@ -12,6 +12,7 @@ import { Container, } from "reactstrap"
 import About from "./routes/About";
 import Lobby from "./routes/Lobby";
 import Game from "./routes/Game";
+import config from "../services/config";
 import LogoutForm from "../components/LogoutForm";
 // noinspection ES6UnusedImports
 import GAME_CSS from "./game.css"
@@ -50,6 +51,9 @@ class SkatCardsGame extends React.Component {
                                 DEBUG: Flush Games
                             </strong>
                         </button>
+                        <span className="text-muted">
+                            ConnectionId: { config().connectionId }
+                        </span>
                         <LogoutForm/>
                     </div>
 

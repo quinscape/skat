@@ -7,89 +7,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72313305-46df-43a4-bb4b-188edb469d4a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/GamePhase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/SkatHand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/channel/Channel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/channel/ChannelListing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/channel/ChannelListings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/channel/ChannelView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/components/GameContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/components/game-container.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/game/cards.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/game/game.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/game/media.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/game/routes/Lobby.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/util/arrayEquals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/util/devicePixelRatio.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/js/util/loadSVG.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/fforw/skat/ws/SkatClientConnectionProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/ChatMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/channel/ChatMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/GameRound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/GameRound.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/SkatGame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skat.backup" beforeDir="false" afterPath="$PROJECT_DIR$/skat.backup" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/GamePhase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/GameRound.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/GameType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/GameValidationException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/Multiplier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/Position.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/SkatHand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/SkatRuntimeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/Suit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/channel/Channel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/channel/ChannelListing.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/channel/ChannelListings.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/channel/ChannelView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/channel/ChatMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/HandFetcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/HandFetcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/SkatCardsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/SkatCardsApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/config/MethodSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/config/MethodSecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/config/MissingOwner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/config/OwnerPermissionEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/config/SkatGamePermissionEvaluator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/config/AppAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/config/AppAuthentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/config/GraphQLConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/config/GraphQLConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/config/SkatGamePermissionEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/config/SkatGamePermissionEvaluator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/config/WebConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/config/WebConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/controller/GraphQLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/controller/GraphQLController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/game/InitialStackFetcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/game/InitialStackFetcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/service/GameRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/service/GameRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/service/InMemoryGameRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/service/InMemoryGameRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/service/SkatGameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/service/SkatGameLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/admin/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/admin/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/admin/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/admin/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/components/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/components/LogoutForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/components/LogoutForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/components/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/components/Table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/components/game-container.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/components/game-container.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/js/game/SkatCardsGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/game/SkatCardsGame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/js/game/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/game/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/game/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/game/game.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/game/game.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/game/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/game/game.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/js/game/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/game/reducers/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/js/game/routes/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/game/routes/Game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/game/routes/Home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/game/routes/Lobby.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/game/routes/Lobby.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/js/services/graphql.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/services/graphql.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/js/services/store-factory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/services/store-factory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/services/loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/services/loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/services/store-factory.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/js/util/loadSymbols.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/js/util/loadSymbols.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-000.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-001.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-002.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-003.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-004.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-006.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-007.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-008.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-009.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-010.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-011.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-012.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-013.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-014.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-015.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-016.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-017.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-018.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-019.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-020.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-021.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-022.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-023.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-024.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-025.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-026.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-027.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-028.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-029.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-030.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-031.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-032.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-033.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-034.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-035.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-036.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-037.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-038.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/card-039.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/deck.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/media/deck-simpler.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/media/deck-simpler.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/de/fforw/skat/TestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/fforw/skat/TestCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/de/fforw/skat/domain/model/GameRoundTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/de/fforw/skat/runtime/HandFetcherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/fforw/skat/runtime/HandFetcherTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -102,94 +69,218 @@
     <session id="-1095548614">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.12" value="2" />
+          <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.8" value="4" />
-          <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.open.time.9" value="5" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="4" />
-          <entry key="css" value="4" />
-          <entry key="graphql" value="7" />
-          <entry key="graphqls" value="2" />
+          <entry key="class" value="18" />
+          <entry key="css" value="9" />
+          <entry key="graphql" value="14" />
+          <entry key="graphqls" value="5" />
           <entry key="html" value="2" />
-          <entry key="java" value="93" />
-          <entry key="js" value="91" />
-          <entry key="json" value="5" />
+          <entry key="java" value="330" />
+          <entry key="js" value="189" />
+          <entry key="json" value="6" />
           <entry key="jsp" value="1" />
+          <entry key="log" value="1" />
           <entry key="md" value="2" />
-          <entry key="properties" value="6" />
+          <entry key="properties" value="15" />
+          <entry key="sh" value="1" />
           <entry key="sql" value="2" />
-          <entry key="svg" value="7" />
-          <entry key="xml" value="5" />
+          <entry key="svg" value="11" />
+          <entry key="xml" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="4" />
-          <entry key="CSS" value="4" />
-          <entry key="GraphQL" value="7" />
-          <entry key="GraphQL Schema" value="2" />
+          <entry key="CLASS" value="18" />
+          <entry key="CSS" value="9" />
+          <entry key="GraphQL" value="14" />
+          <entry key="GraphQL Schema" value="5" />
           <entry key="HTML" value="2" />
-          <entry key="JAVA" value="93" />
-          <entry key="JSON" value="5" />
+          <entry key="JAVA" value="330" />
+          <entry key="JSON" value="6" />
           <entry key="JSP" value="1" />
-          <entry key="JavaScript" value="91" />
+          <entry key="JavaScript" value="189" />
           <entry key="Markdown" value="2" />
-          <entry key="Properties" value="6" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Properties" value="15" />
           <entry key="SQL" value="2" />
-          <entry key="SVG" value="7" />
-          <entry key="XML" value="5" />
+          <entry key="SVG" value="11" />
+          <entry key="XML" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="182" />
-          <entry key="dummy" value="37" />
-          <entry key="graphql" value="109" />
+          <entry key="css" value="370" />
+          <entry key="dummy" value="55" />
+          <entry key="graphql" value="209" />
           <entry key="html" value="40" />
-          <entry key="java" value="9652" />
-          <entry key="js" value="17818" />
+          <entry key="java" value="28599" />
+          <entry key="js" value="26873" />
           <entry key="json" value="78" />
           <entry key="jsp" value="9" />
           <entry key="md" value="16" />
-          <entry key="properties" value="20" />
+          <entry key="properties" value="49" />
+          <entry key="sh" value="131" />
           <entry key="sql" value="2" />
           <entry key="svg" value="1" />
-          <entry key="xml" value="22" />
+          <entry key="txt" value="12" />
+          <entry key="xml" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="182" />
-          <entry key="GraphQL" value="173" />
+          <entry key="CSS" value="370" />
+          <entry key="GraphQL" value="290" />
           <entry key="HTML" value="40" />
-          <entry key="JAVA" value="9652" />
+          <entry key="JAVA" value="28599" />
           <entry key="JSON" value="78" />
           <entry key="JSP" value="9" />
-          <entry key="JavaScript" value="17754" />
+          <entry key="JavaScript" value="26792" />
           <entry key="Markdown" value="16" />
-          <entry key="PLAIN_TEXT" value="37" />
-          <entry key="Properties" value="20" />
+          <entry key="PLAIN_TEXT" value="198" />
+          <entry key="Properties" value="49" />
           <entry key="SQL" value="2" />
           <entry key="SVG" value="1" />
-          <entry key="XML" value="22" />
+          <entry key="XML" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.spring.boot.run.usages" />
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
+    </session>
+    <session id="1611569599">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="64" />
+          <entry key="java" value="4946" />
+          <entry key="js" value="293" />
+          <entry key="properties" value="5" />
+          <entry key="xml" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="4946" />
+          <entry key="JavaScript" value="293" />
+          <entry key="PLAIN_TEXT" value="64" />
+          <entry key="Properties" value="5" />
+          <entry key="XML" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="3" />
+          <entry key="java" value="55" />
+          <entry key="js" value="4" />
+          <entry key="properties" value="1" />
+          <entry key="xml" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="3" />
+          <entry key="JAVA" value="55" />
+          <entry key="JavaScript" value="4" />
+          <entry key="Properties" value="1" />
+          <entry key="XML" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.spring.boot.run.usages" />
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/service/SkatGameLogic.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/ws/SkatClientConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1680">
-              <caret line="112" column="27" selection-start-line="112" selection-start-column="19" selection-end-line="112" selection-end-column="27" />
+            <state relative-caret-position="466">
+              <caret line="84" column="11" lean-forward="true" selection-start-line="84" selection-start-column="11" selection-end-line="84" selection-end-column="11" />
+              <folding>
+                <element signature="e#1844#1845#0" expanded="true" />
+                <element signature="e#1892#1893#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/ws/SkatWebSocketHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2154">
+              <caret line="211" column="20" selection-start-line="211" selection-start-column="20" selection-end-line="211" selection-end-column="20" />
+              <folding>
+                <element signature="e#6809#6810#0" expanded="true" />
+                <element signature="e#6863#6864#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-websocket/5.0.6.RELEASE/spring-websocket-5.0.6.RELEASE-sources.jar!/org/springframework/web/socket/handler/TextWebSocketHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="316">
+              <caret line="36" column="56" lean-forward="true" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-websocket/5.0.6.RELEASE/spring-websocket-5.0.6.RELEASE-sources.jar!/org/springframework/web/socket/handler/AbstractWebSocketHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="444">
+              <caret line="73" column="19" selection-start-line="73" selection-start-column="19" selection-end-line="73" selection-end-column="19" />
+              <folding>
+                <element signature="e#2516#2517#0" expanded="true" />
+                <element signature="e#2535#2536#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-websocket/5.0.6.RELEASE/spring-websocket-5.0.6.RELEASE-sources.jar!/org/springframework/web/socket/WebSocketHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-160">
+              <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/js/services/hub.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/js/services/storeFactory.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="429">
+              <caret line="60" column="14" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -197,80 +288,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/js/game/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="975">
-              <caret line="65" column="12" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
+            <state relative-caret-position="285">
+              <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/js/game/actions/index.js">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/message/IncomingMessageHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/js/services/graphql.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+            <state relative-caret-position="315">
+              <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/js/game/routes/Game.js">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/message/GraphQLMessageHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="60" column="40" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/GameRound.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2040">
-              <caret line="163" column="26" selection-start-line="163" selection-start-column="26" selection-end-line="163" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/HandFetcher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/de/fforw/skat/runtime/HandFetcherTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/GamePhase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/Position.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+            <state relative-caret-position="144">
+              <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -280,77 +317,82 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JavaScript File" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>transl</find>
-      <find>cy</find>
-      <find>loadSVG</find>
-      <find>loadSymbols</find>
-      <find>push</find>
-      <find>createGame</find>
-      <find>whatwg-fetch</find>
-      <find>symbols</find>
-      <find>symbol</find>
-      <find>mergedSymbols</find>
-      <find>width</find>
-      <find>00ff00ff</find>
-      <find>25be79</find>
-      <find>008000</find>
-      <find>ffff00</find>
-      <find>000080</find>
-      <find>ff0000</find>
-      <find>808000</find>
-      <find>1e1e77</find>
-      <find>domainq</find>
-      <find>getHand</find>
-      <find>posi</find>
-      <find>currentGameList</find>
-      <find>currentGameLis</find>
-      <find>initialStack</find>
-      <find>Fetch</find>
-      <find>current.ini</find>
-      <find>CREATE_GAME_MUTATION</find>
-      <find>$windowId</find>
-      <find>joinGame</find>
+      <find>tr</find>
+      <find>table</find>
+      <find>seats</find>
+      <find>&lt;ta</find>
+      <find>&lt;Ta</find>
+      <find>nextValue</find>
+      <find>ws.on</find>
+      <find>console.</find>
+      <find>console.info</find>
+      <find>console.log</find>
+      <find>currentPosition</find>
+      <find>isFinished</find>
+      <find>&lt;h</find>
+      <find>PUSH_CH</find>
+      <find>current</find>
+      <find>log.</find>
+      <find>info</find>
+      <find>PUSH_CHANNEL_UPDATE</find>
+      <find>secret</find>
+      <find>&quot;id&quot;:49</find>
+      <find>onMessage</find>
+      <find>Error in</find>
+      <find>catch</find>
+      <find>handlers</find>
+      <find>PUSH_A</find>
+      <find>handleTextMessage</find>
+      <find>Rereg</find>
+      <find>handl</find>
+      <find>Reregisteri</find>
+      <find>createWebSocket</find>
     </findStrings>
     <replaceStrings>
-      <replace>de.fforw.skat</replace>
-      <replace>skat</replace>
-      <replace>protected</replace>
-      <replace>public</replace>
-      <replace>);(</replace>
-      <replace>SkatRuntimeException</replace>
-      <replace>Base32Util</replace>
-      <replace>$secret</replace>
-      <replace>\n$1</replace>
-      <replace>&quot;\n$1</replace>
-      <replace>&quot;auto&quot;</replace>
-      <replace>&quot;normal</replace>
-      <replace>&quot;normal&quot;</replace>
-      <replace>&quot;none&quot;</replace>
-      <replace>&quot;$1&quot;</replace>
-      <replace>width</replace>
-      <replace>className</replace>
-      <replace>{ cx(&quot;seat&quot;) }</replace>
-      <replace>channels</replace>
-      <replace>centerX</replace>
-      <replace>centerY</replace>
-      <replace>25be79</replace>
-      <replace>008044</replace>
-      <replace>ffde00</replace>
-      <replace>1e1e77</replace>
-      <replace>d82727</replace>
-      <replace>c48400</replace>
-      <replace>31317e</replace>
+      <replace>Roles.ADMIN</replace>
+      <replace>GameUser</replace>
+      <replace>SkatWebSocketHandler</replace>
+      <replace>connectionId</replace>
+      <replace>:</replace>
+      <replace>,</replace>
+      <replace>} ,</replace>
+      <replace>circle$1</replace>
+      <replace>circle$1:</replace>
+      <replace>$1text$2:</replace>
+      <replace>X:</replace>
+      <replace>y:</replace>
+      <replace>Y:</replace>
+      <replace>numberOfSeats</replace>
+      <replace>symbol:card-$1\/&quot;</replace>
+      <replace>symbol:kard-$1\/&quot;</replace>
+      <replace>-$1&quot;/</replace>
+      <replace>symbol:card</replace>
+      <replace>#888888;stroke-width:1</replace>
+      <replace>#000000;stroke-width:1</replace>
+      <replace>channel</replace>
+      <replace>hand</replace>
+      <replace>currentPosition</replace>
+      <replace>PUSH_ACTION</replace>
+      <replace>setLastUpdated(Instant.now())</replace>
+      <replace>setLastUpdated(Instant.now().toString())</replace>
+      <replace>SkatClientConnection skatClientConnection,</replace>
+      <replace>conn,</replace>
+      <replace>seating</replace>
+      <replace>channelId</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/main/java/de/fforw/skat/model</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -358,57 +400,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/js/game/cards.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/template.html" />
-        <option value="$PROJECT_DIR$/src/test/js/random-name.js" />
-        <option value="$PROJECT_DIR$/src/main/js/game/routes/Home.js" />
-        <option value="$PROJECT_DIR$/src/main/js/components/TableBackground.js" />
-        <option value="$USER_HOME$/deck-simplified2.svg" />
-        <option value="$PROJECT_DIR$/test.json" />
-        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/SkatHand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/SkatGame.java" />
-        <option value="$PROJECT_DIR$/src/main/js/game/media.js" />
-        <option value="$PROJECT_DIR$/src/main/js/util/loadSVG.js" />
-        <option value="$PROJECT_DIR$/src/main/js/game/game.css" />
-        <option value="$PROJECT_DIR$/src/main/js/game/index.js" />
-        <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/src/main/js/game/routes/Lobby.js" />
-        <option value="$PROJECT_DIR$/src/main/js/game/reducers/index.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/js/services/store-factory.js" />
-        <option value="$PROJECT_DIR$/src/main/js/game/SkatCardsGame.js" />
-        <option value="$PROJECT_DIR$/src/main/js/util/arrayEquals.js" />
-        <option value="$PROJECT_DIR$/src/main/js/game/game.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/media/deck-simpler.svg" />
+        <option value="$PROJECT_DIR$/src/main/js/components/game-container.css" />
+        <option value="$PROJECT_DIR$/src/main/js/components/Table.js" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/HandFetcher.java" />
+        <option value="$PROJECT_DIR$/src/test/java/de/fforw/skat/TestCase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/util/MaximumGameValueExceedException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/util/Util.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/model/Bid.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/model/GamePhase.java" />
         <option value="$PROJECT_DIR$/src/main/js/services/loader.js" />
         <option value="$PROJECT_DIR$/src/main/js/util/loadSymbols.js" />
-        <option value="$PROJECT_DIR$/src/main/js/util/randomName.js" />
-        <option value="$PROJECT_DIR$/src/main/js/components/Table.js" />
-        <option value="$PROJECT_DIR$/src/main/js/components/Card.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/media/deck.svg" />
-        <option value="$PROJECT_DIR$/src/main/js/components/GameContainer.js" />
-        <option value="$PROJECT_DIR$/src/main/js/components/game-container.css" />
-        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/service/GameRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/service/InMemoryGameRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/Channel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/message/OutgoingMessageType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/model/channel/ChannelUpdate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/model/channel/ChannelUpdateAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/model/channel/ChatMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/model/GameRound.java" />
+        <option value="$PROJECT_DIR$/src/main/js/game/reducers/index.js" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/config/MessageConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/ws/ChatSocketHandler.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/service/ChannelListing.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/service/SkatGameLogic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/service/PagedGames.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/service/ChannelListings.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/ChannelListings.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/channel/ChannelListings.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/channel/ChannelView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/game/CurrentRoundFetcher.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/channel/Channel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/game/InitialStackFetcher.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/channel/ChannelListing.java" />
-        <option value="$PROJECT_DIR$/src/test/java/de/fforw/skat/runtime/HandFetcherTest.java" />
-        <option value="$PROJECT_DIR$/src/main/js/game/routes/Game.js" />
-        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/GamePhase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/GameRound.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/HandFetcher.java" />
-        <option value="$PROJECT_DIR$/src/main/js/game/actions/index.js" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/SkatCardsApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/message/IncomingMessageHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/message/ConnectionCloseListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/config/AppAuthentication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/config/WebsocketConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/js/game/game.css" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/ws/SkatClientConnectionProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/ws/SkatClientConnectionProviderFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/config/GraphQLConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/controller/GraphQLController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/config/WebConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/js/services/graphql.js" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/message/PreparedMessages.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/model/Position.java" />
+        <option value="$PROJECT_DIR$/src/main/js/game/routes/Game.js" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/message/OutgoingMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/ws/SkatSocketHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/ws/SkatClientConnection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/service/InMemoryGameRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/service/SkatGameLogic.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/service/CoreGameLogic.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/model/Bidding.java" />
+        <option value="$PROJECT_DIR$/src/main/js/game/actions/index.js" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/message/PreparedMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/model/channel/Channel.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/js/services/hub.js" />
+        <option value="$PROJECT_DIR$/src/main/js/services/storeFactory.js" />
+        <option value="$PROJECT_DIR$/src/main/js/game/game.js" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/message/GraphQLMessageHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/fforw/skat/ws/SkatWebSocketHandler.java" />
       </list>
     </option>
   </component>
@@ -454,7 +496,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -495,36 +536,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="skat" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="skat" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="skat" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="skat" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="skat" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="channel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="skat" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="skat" type="462c0819:PsiDirectoryNode" />
               <item name="runtime" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -542,110 +553,9 @@
               <item name="skat" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="skat" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="skat" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="skat" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="skat" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="actions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="skat" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="skat" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="skat" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="skat" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="skat" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="skat" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="skat" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="skat" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="skat" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="ws" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="skat" type="b2602c69:ProjectViewProjectNode" />
@@ -656,6 +566,8 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -669,27 +581,35 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SearchEverywhereHistoryKey" value="PUSH_CHAN&#9;null&#9;null&#10;findB&#9;PSI&#9;JAVA://de.fforw.skat.runtime.HandFetcher#findSeatByConnection&#10;HandFetcher&#9;FILE&#9;file:///home/sven/ideaprojects/skat/src/main/java/de/fforw/skat/runtime/HandFetcher.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533221078990" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="javascript.nodejs.core.library.configured.version" value="8.11.3" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$USER_HOME$/deck-simplified2.svg" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../domainql" />
     <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/node_modules/mocha" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/bin/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="de.fforw.skat.ws" />
+      <recent name="de.fforw.skat.util" />
+      <recent name="de.fforw.skat.model" />
       <recent name="de.fforw.skat.runtime" />
-      <recent name="de.fforw.skat.domain.model" />
-      <recent name="de.fforw.skat.runtime.game" />
-      <recent name="de.fforw.skat.runtime.service" />
+      <recent name="de.fforw.skat.model.channel" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="de.fforw.skat.runtime.message" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="de.fforw.skat.runtime" />
@@ -700,9 +620,7 @@
       <recent name="" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="de.fforw.skat.domain.model" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="de.fforw.skat" />
       <recent name="de.fforw.skat.domain.model" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -710,6 +628,12 @@
       <recent name="$PROJECT_DIR$/src/main/js/components" />
       <recent name="$PROJECT_DIR$/src/test/js" />
       <recent name="$PROJECT_DIR$/src/main/js" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="de.fforw.skat.runtime.service" />
+      <recent name="de.fforw.skat.runtime.message" />
+      <recent name="de.fforw.skat.runtime.config" />
+      <recent name="de.fforw.skat.domain.model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/media" />
@@ -739,36 +663,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Util" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="de.fforw.skat.util.Util" />
+      <module name="skat" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebConfiguration" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="de.fforw.skat.runtime.config.WebConfiguration" />
+      <module name="skat" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Base32Test.testBase32" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="skat" />
-      <option name="PACKAGE_NAME" value="de.fforw.skat.util" />
-      <option name="MAIN_CLASS_NAME" value="de.fforw.skat.util.Base32Test" />
-      <option name="METHOD_NAME" value="testBase32" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameRoundTest.name" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="skat" />
-      <option name="PACKAGE_NAME" value="de.fforw.skat.domain.model" />
-      <option name="MAIN_CLASS_NAME" value="de.fforw.skat.domain.model.GameRoundTest" />
-      <option name="METHOD_NAME" value="name" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -931,18 +843,18 @@
       <item itemvalue="Spring Boot.SkatCardsApplication" />
       <item itemvalue="Tomcat Server.Local Tomcat" />
       <item itemvalue="JUnit.TestCase.logHashedPW" />
-      <item itemvalue="JUnit.GameRoundTest.name" />
-      <item itemvalue="JUnit.Base32Test.testBase32" />
       <item itemvalue="Mocha.randomName.creates random names" />
       <item itemvalue="JUnit.HandFetcherTest.testGetCurrentPosition" />
+      <item itemvalue="Application.WebConfiguration" />
+      <item itemvalue="Application.Util" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Util" />
+        <item itemvalue="JUnit.TestCase.logHashedPW" />
+        <item itemvalue="Application.WebConfiguration" />
         <item itemvalue="JUnit.HandFetcherTest.testGetCurrentPosition" />
         <item itemvalue="Mocha.randomName.creates random names" />
-        <item itemvalue="JUnit.TestCase.logHashedPW" />
-        <item itemvalue="JUnit.Base32Test.testBase32" />
-        <item itemvalue="JUnit.GameRoundTest.name" />
       </list>
     </recent_temporary>
   </component>
@@ -963,14 +875,20 @@
       <workItem from="1532986143747" duration="2063000" />
       <workItem from="1532990222125" duration="2277000" />
       <workItem from="1532996363096" duration="4045000" />
-      <workItem from="1533029463585" duration="571000" />
+      <workItem from="1533029463585" duration="5224000" />
+      <workItem from="1533039859390" duration="8719000" />
+      <workItem from="1533054494359" duration="13727000" />
+      <workItem from="1533116098430" duration="3121000" />
+      <workItem from="1533119659112" duration="29017000" />
+      <workItem from="1533152072306" duration="21117000" />
+      <workItem from="1533174521410" duration="3483000" />
+      <workItem from="1533202730536" duration="3968000" />
+      <workItem from="1533212120075" duration="7401000" />
+      <workItem from="1533225606650" duration="18281000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Js_Tests - 2018.07.30 at 18h 16m 08s.xml">
-      <configuration name="All Js Tests" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
     <history-entry file="All_Js_Tests - 2018.07.30 at 18h 16m 36s.xml">
       <configuration name="All Js Tests" configurationId="mocha-javascript-test-runner" />
     </history-entry>
@@ -998,36 +916,79 @@
     <history-entry file="HandFetcherTest_testGetCurrentPosition - 2018.07.31 at 03h 28m 57s.xml">
       <configuration name="HandFetcherTest.testGetCurrentPosition" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestCase_logHashedPW - 2018.08.02 at 01h 25m 02s.xml">
+      <configuration name="TestCase.logHashedPW" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116612000" />
+    <option name="totallyTimeSpent" value="230099000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2683706" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2912673" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Image Layers" order="6" />
+      <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3290461" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3290461" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3279743" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32690248" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978564" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="GraphQL" order="7" visible="true" weight="0.3290461" />
+      <window_info anchor="bottom" id="GraphQL" order="7" weight="0.32690248" />
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3290461" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32690248" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3290461" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="Java Enterprise" order="14" />
+      <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.3290461" />
+      <window_info anchor="bottom" id="Application Servers" order="16" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28115016" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Web" order="2" side_tool="true" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Image Layers" order="6" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3279743" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3279743" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978564" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="GraphQL" order="7" weight="0.3279743" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3279743" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" />
       <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.3290461" />
+      <window_info anchor="bottom" id="Application Servers" order="16" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1035,40 +996,16 @@
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2550586" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Web" order="2" side_tool="true" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3290461" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3290461" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="GraphQL" order="7" weight="0.3290461" />
-      <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3290461" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="bottom" id="Java Enterprise" order="14" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.sh" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -1078,329 +1015,387 @@
       <path value="$PROJECT_DIR$/node_modules/domainql-form" />
     </ignored-roots>
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>HandFetcher.getCurrentPosition(
+            seatIndex, current.getCurrentDealer(), numberOfSeats)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/js/admin/admin.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/js/game/media.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/config/WebsocketConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        <state relative-caret-position="240">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/js/game/game.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/js/error.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/js/game/routes/Lobby.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="125" column="4" selection-start-line="125" selection-start-column="4" selection-end-line="125" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="32" selection-start-line="32" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/js/admin/reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/js/game/reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="57" selection-start-line="3" selection-start-column="57" selection-end-line="3" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/js/services/store-factory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="59" column="27" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/js/game/SkatCardsGame.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/js/util/arrayEquals.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/js/util/loadSVG.js">
+    <entry file="jar://$MAVEN_REPOSITORY$/de/quinscape/domainql/domainql/0.8-SNAPSHOT/domainql-0.8-SNAPSHOT.jar!/de/quinscape/domainql/param/DataFetchingEnvironmentProvider.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/js/services/loader.js">
+    <entry file="jar://$MAVEN_REPOSITORY$/de/quinscape/domainql/domainql/0.8-SNAPSHOT/domainql-0.8-SNAPSHOT.jar!/de/quinscape/domainql/param/ParameterProvider.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/js/game/game.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="390">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/js/util/loadSymbols.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/model/GameUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+        <state relative-caret-position="360">
+          <caret line="36" column="11" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/js/components/Card.js">
+    <entry file="file://$PROJECT_DIR$/../domainql/src/main/java/de/quinscape/domainql/param/DataFetchingEnvironmentProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="71" column="45" selection-start-line="71" selection-start-column="45" selection-end-line="71" selection-end-column="45" />
+        <state relative-caret-position="105">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/js/random-name.js">
+    <entry file="file://$PROJECT_DIR$/../domainql/src/main/java/de/quinscape/domainql/param/ParameterProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/js/util/randomName.js">
+    <entry file="jar://$MAVEN_REPOSITORY$/de/quinscape/domainql/domainql/0.8-SNAPSHOT/domainql-0.8-SNAPSHOT.jar!/de/quinscape/domainql/param/ParameterProviderFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../domainql/src/main/java/de/quinscape/domainql/param/ParameterProviderFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/ws/SkatClientConnectionProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/ws/SkatClientConnectionProviderFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/controller/GraphQLController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/config/WebConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/config/GraphQLConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../domainql/src/main/java/de/quinscape/domainql/DomainQL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="757" selection-start-line="757" selection-end-line="757" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../domainql/src/test/java/de/quinscape/domainql/DomainQLTest.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/js/services/graphql.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/HandFetcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="175" column="22" selection-start-line="175" selection-start-column="22" selection-end-line="175" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/model/Position.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+          <folding>
+            <element signature="e#151#152#0" expanded="true" />
+            <element signature="e#197#198#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/media/deck.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/js/components/Table.js">
+    <entry file="file://$PROJECT_DIR$/src/main/js/game/routes/Game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+        <state relative-caret-position="184">
+          <caret line="114" column="41" selection-start-line="114" selection-start-column="34" selection-end-line="114" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/js/components/game-container.css">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-websocket/5.0.6.RELEASE/spring-websocket-5.0.6.RELEASE-sources.jar!/org/springframework/web/socket/AbstractWebSocketMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        <state relative-caret-position="200">
+          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
+          <folding>
+            <element signature="e#1159#1160#0" expanded="true" />
+            <element signature="e#1185#1186#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar!/javax/validation/constraints/NotNull.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/tables/pojos/AppUser.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/tables/AppUser.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/js/components/GameContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/service/GameRepository.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-websocket/5.0.6.RELEASE/spring-websocket-5.0.6.RELEASE.jar!/org/springframework/web/socket/TextMessage.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-websocket/5.0.6.RELEASE/spring-websocket-5.0.6.RELEASE-sources.jar!/org/springframework/web/socket/adapter/standard/StandardToWebSocketExtensionAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-websocket/5.0.6.RELEASE/spring-websocket-5.0.6.RELEASE-sources.jar!/org/springframework/web/socket/WebSocketExtension.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/service/InMemoryGameRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="56" column="43" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
+        <state relative-caret-position="503">
+          <caret line="109" column="59" lean-forward="true" selection-start-line="109" selection-start-column="59" selection-end-line="109" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/service/SkatGameLogic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="80" column="24" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
+        <state relative-caret-position="540">
+          <caret line="241" column="15" selection-start-line="241" selection-start-column="15" selection-end-line="241" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/channel/ChannelListings.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/service/CoreGameLogic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        <state relative-caret-position="193">
+          <caret line="140" column="60" selection-start-line="140" selection-start-column="60" selection-end-line="140" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/channel/ChannelView.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/model/Bidding.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/channel/Channel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="80" column="14" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/game/InitialStackFetcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/graphql-java/graphql-java/8.0/graphql-java-8.0-sources.jar!/graphql/schema/DataFetchingEnvironment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/config/SkatGamePermissionEvaluator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.0.5.RELEASE/spring-security-core-5.0.5.RELEASE-sources.jar!/org/springframework/security/access/PermissionEvaluator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.0.5.RELEASE/spring-security-core-5.0.5.RELEASE-sources.jar!/org/springframework/security/access/expression/DenyAllPermissionEvaluator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/SkatHand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/channel/ChannelListing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="40" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graphql.config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        <state relative-caret-position="135">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/js/admin/actions/index.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/service/SkatGameLogic.java">
+    <entry file="file://$PROJECT_DIR$/src/main/js/game/actions/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="112" column="27" selection-start-line="112" selection-start-column="19" selection-end-line="112" selection-end-column="27" />
+        <state relative-caret-position="474">
+          <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/message/OutgoingMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+          <folding>
+            <element signature="e#669#670#0" expanded="true" />
+            <element signature="e#721#722#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-websocket/5.0.6.RELEASE/spring-websocket-5.0.6.RELEASE-sources.jar!/org/springframework/web/socket/WebSocketMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-websocket/5.0.6.RELEASE/spring-websocket-5.0.6.RELEASE-sources.jar!/org/springframework/web/socket/WebSocketSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="123" column="33" selection-start-line="123" selection-start-column="33" selection-end-line="123" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-websocket/5.0.6.RELEASE/spring-websocket-5.0.6.RELEASE-sources.jar!/org/springframework/web/socket/TextMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/message/OutgoingMessageType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/model/channel/ChannelUpdateAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding>
+            <element signature="e#353#354#0" expanded="true" />
+            <element signature="e#397#398#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/message/PreparedMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/message/PreparedMessages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/model/channel/Channel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="147" column="44" selection-start-line="147" selection-start-column="44" selection-end-line="147" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/message/IncomingMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="49" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/js/services/hub.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/js/services/storeFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="60" column="14" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/js/game/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="65" column="12" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
+        <state relative-caret-position="285">
+          <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/js/game/actions/index.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/message/IncomingMessageHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="315">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/js/game/routes/Game.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/ws/SkatClientConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="60" column="40" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/GameRound.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="163" column="26" selection-start-line="163" selection-start-column="26" selection-end-line="163" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/HandFetcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        <state relative-caret-position="466">
+          <caret line="84" column="11" lean-forward="true" selection-start-line="84" selection-start-column="11" selection-end-line="84" selection-end-column="11" />
           <folding>
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#659#660#0" expanded="true" />
+            <element signature="e#1844#1845#0" expanded="true" />
+            <element signature="e#1892#1893#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/de/fforw/skat/runtime/HandFetcherTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/runtime/message/GraphQLMessageHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+        <state relative-caret-position="144">
+          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/GamePhase.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-websocket/5.0.6.RELEASE/spring-websocket-5.0.6.RELEASE-sources.jar!/org/springframework/web/socket/handler/TextWebSocketHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+        <state relative-caret-position="316">
+          <caret line="36" column="56" lean-forward="true" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/domain/model/Position.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-websocket/5.0.6.RELEASE/spring-websocket-5.0.6.RELEASE-sources.jar!/org/springframework/web/socket/WebSocketHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        <state relative-caret-position="-160">
+          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/js/services/graphql.js">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-websocket/5.0.6.RELEASE/spring-websocket-5.0.6.RELEASE-sources.jar!/org/springframework/web/socket/handler/AbstractWebSocketHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+        <state relative-caret-position="444">
+          <caret line="73" column="19" selection-start-line="73" selection-start-column="19" selection-end-line="73" selection-end-column="19" />
+          <folding>
+            <element signature="e#2516#2517#0" expanded="true" />
+            <element signature="e#2535#2536#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/fforw/skat/ws/SkatWebSocketHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2154">
+          <caret line="211" column="20" selection-start-line="211" selection-start-column="20" selection-end-line="211" selection-end-column="20" />
+          <folding>
+            <element signature="e#6809#6810#0" expanded="true" />
+            <element signature="e#6863#6864#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,12 +1,12 @@
 package de.fforw.skat.runtime.config;
 
+import de.fforw.skat.domain.Public;
+import de.fforw.skat.ws.SkatClientConnectionProviderFactory;
 import de.quinscape.domainql.DomainQL;
 import de.quinscape.domainql.annotation.GraphQLLogic;
-import de.quinscape.domainql.config.SourceField;
-import de.quinscape.domainql.config.TargetField;
-import de.fforw.skat.domain.Public;
 import de.quinscape.spring.jsview.loader.ResourceLoader;
 import de.quinscape.spring.jsview.loader.ServletResourceLoader;
+import graphql.GraphQL;
 import graphql.schema.GraphQLSchema;
 import org.jooq.DSLContext;
 import org.slf4j.Logger;
@@ -21,9 +21,6 @@ import org.springframework.context.event.EventListener;
 import javax.servlet.ServletContext;
 import java.io.IOException;
 import java.util.Collection;
-
-
-import static de.fforw.skat.domain.Tables.*;
 /**
  * Exemplary configuration of GraphQL in a project.
  */
@@ -52,13 +49,12 @@ public class GraphQLConfiguration
 
 
     @Bean
-    public GraphQLSchema graphQLSchema(
-    )
-
+    public GraphQLSchema graphQLSchema()
     {
         final Collection<Object> logicBeans = applicationContext.getBeansWithAnnotation(GraphQLLogic.class).values();
 
         return DomainQL.newDomainQL(dslContext)
+            .parameterProvider(new SkatClientConnectionProviderFactory(applicationContext))
             .logicBeans(logicBeans)
             .objectTypes(Public.PUBLIC)
             .createMirrorInputTypes(true)
@@ -67,6 +63,12 @@ public class GraphQLConfiguration
 //            .configureRelation( FOO.OWNER_ID, SourceField.OBJECT_AND_SCALAR, TargetField.MANY)
             .buildGraphQLSchema();
     }
+
+    @Bean
+    public GraphQL graphQL(GraphQLSchema schema)
+    {
+        return GraphQL.newGraphQL(schema).build();
+    }    
 
     @Bean
     public ResourceLoader resourceLoader() throws IOException

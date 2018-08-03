@@ -4,8 +4,10 @@ import de.fforw.skat.runtime.config.DomainConfiguration;
 import de.fforw.skat.runtime.config.GraphQLConfiguration;
 import de.fforw.skat.runtime.config.SecurityConfiguration;
 import de.fforw.skat.runtime.config.WebConfiguration;
+import de.fforw.skat.runtime.config.WebsocketConfiguration;
 import de.fforw.skat.runtime.service.GameRepository;
 import de.fforw.skat.runtime.service.InMemoryGameRepository;
+import de.fforw.skat.ws.SkatWebSocketHandler;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -14,7 +16,6 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
 import java.security.SecureRandom;
@@ -31,6 +32,7 @@ import java.util.Random;
 )
 @Import({
     GraphQLConfiguration.class,
+    WebsocketConfiguration.class,
     DomainConfiguration.class,
     WebConfiguration.class,
     SecurityConfiguration.class
@@ -50,11 +52,16 @@ public class SkatCardsApplication
     }
 
     @Bean
-    public GameRepository gameRepository()
+    public GameRepository gameRepository(
+        SkatWebSocketHandler skatWebSocketHandler
+    )
     {
-        return new InMemoryGameRepository();
-    }
+        final InMemoryGameRepository repository = new InMemoryGameRepository();
 
+        skatWebSocketHandler.register(repository);
+
+        return repository;
+    }
 
     @Bean
     public Random random()

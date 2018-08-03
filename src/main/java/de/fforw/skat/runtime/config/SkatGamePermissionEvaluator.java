@@ -1,6 +1,7 @@
 package de.fforw.skat.runtime.config;
 
-import de.fforw.skat.domain.model.channel.Channel;
+import de.fforw.skat.model.GameUser;
+import de.fforw.skat.model.channel.Channel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.access.PermissionEvaluator;
@@ -37,9 +38,9 @@ public class SkatGamePermissionEvaluator
         if (targetDomainObject instanceof Channel)
         {
             final String userId = appUserDetails.getId();
-            for (String user : ((Channel) targetDomainObject).getUsers())
+            for (GameUser user : ((Channel) targetDomainObject).getUsers())
             {
-                if (matchUser(user, userId))
+                if (user.getName().equals(userId))
                 {
                     return true;
                 }
@@ -48,17 +49,6 @@ public class SkatGamePermissionEvaluator
         return false;
     }
 
-
-    private boolean matchUser(String user, String userId)
-    {
-        return user.startsWith(userId) && (
-            user.length() == userId.length() ||
-                user.charAt(userId.length()) == ':'
-        );
-    }
-
-
-    @Override
     public boolean hasPermission(
         Authentication authentication, Serializable targetId, String targetType, Object permission
     )

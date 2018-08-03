@@ -43,16 +43,17 @@ export default function(uri) {
 
             if (m)
             {
-                const containerRect = svgContainer.getBoundingClientRect();
 
                 const aabb = group.getBoundingClientRect();
 
+
                 const name = m[1];
+                //console.log("SYMBOL", name, aabb);
                 symbols[name] = {
                     snippet: { __html : group.innerHTML },
                     aabb: {
-                        x: aabb.x - containerRect.x,
-                        y: aabb.y - containerRect.y,
+                        x: aabb.left + 10000,
+                        y: aabb.top,
                         width: aabb.width,
                         height: aabb.height
                     },

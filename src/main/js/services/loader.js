@@ -59,7 +59,7 @@ export default function (svgFiles) {
 
             mergedSymbols = merged;
 
-            console.log("Loaded ", merged);
+            //console.log("Loaded ", merged);
 
             return merged;
         })

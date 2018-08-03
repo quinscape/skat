@@ -1,6 +1,6 @@
 package de.fforw.skat.runtime;
 
-import de.fforw.skat.domain.model.Position;
+import de.fforw.skat.model.Position;
 import org.junit.Test;
 
 import static de.fforw.skat.runtime.HandFetcher.getCurrentPosition;

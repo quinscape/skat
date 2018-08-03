@@ -4,3 +4,25 @@
     top: 0;
     left: -10000px;
 }
+
+.list-group.seating
+{
+    position: relative;
+}
+
+.list-group-item.seat
+{
+    background-color: #83c583;
+    
+}
+
+.list-group-item span.current
+{
+    font-weight: bold;
+}
+
+.list-group-item .pos
+{
+    position: absolute;
+    right: 11ex;
+}

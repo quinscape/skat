@@ -3,16 +3,18 @@ import { Promise } from "es6-promise-polyfill"
 import bootstrap from "jsview-bootstrap"
 import React from "react"
 
-import rootReducer from "./reducers/index"
+import rootReducer, { getCurrentChannel } from "./reducers/index"
+import { pushAction } from "./actions/index"
 import FormConfigProvider from "domainql-form/lib/FormConfigProvider"
 
-import storeFactory from "../services/store-factory"
+import storeFactory from "../services/storeFactory"
 import createHistory from "history/createBrowserHistory";
 import SkatCardsGame from "./SkatCardsGame";
 import config, { __initConfig } from "../services/config";
 
 import { Provider } from "react-redux"
 import loader from "../services/loader";
+import Hub from "../services/hub";
 
 
 const history = createHistory();
@@ -22,7 +24,7 @@ bootstrap(
 
         console.info("INITIAL DATA", initial);
 
-        __initConfig(initial, ["contextPath", "authentication", "csrfToken", "windowId"]);
+        __initConfig(initial, ["contextPath", "authentication", "csrfToken", "connectionId"]);
 
         // We need to tell webpack from where to load dynamically imported modules
         // noinspection JSUnresolvedVariable
@@ -36,11 +38,24 @@ bootstrap(
             history
         );
 
-        return loader([
-            "/media/deck.svg"
-        ]).then(symbols => {
+        Hub.register("PUSH_ACTION", ({payload, id}) => {
 
-            console.log(symbols);
+            //console.log("PUSH_ACTION", payload, "id = ", id);
+            
+            store.dispatch(
+                pushAction(payload, id)
+            );
+        });
+
+        return Promise.all([
+            Hub.init(initial.connectionId),
+            loader([
+                "/media/deck-simpler.svg"
+            ])
+        ]).then( ([ connectionId, symbols]) => {
+
+
+            //console.log("SYMBOLS", symbols);
 
             return (
                 <Provider store={store}>
@@ -67,10 +82,14 @@ export const PRELOADED_QUERIES = {
                 channels{
                     id
                     gameInProgress                           
-                    users
+                    users{
+                        name
+                        type 
+                    }
                 }
                 rowCount
             }
         }
     `
 };
+ 

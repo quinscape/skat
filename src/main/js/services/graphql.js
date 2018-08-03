@@ -1,4 +1,4 @@
-import config from "../services/config"
+import Hub from "../services/hub"
 
 
 /**
@@ -12,7 +12,7 @@ export function defaultErrorHandler(errors)
 }
 
 /**
- * GraphQL query service
+ * GraphQL query service over websocket
  *
  * @param {Object} params               Parameters
  * @param {String} params.query         query string
@@ -24,40 +24,33 @@ export default function (params) {
 
     //console.log("QUERY: ", params);
 
-    const { csrfToken, contextPath, windowId } = config();
+    return Hub.request("GRAPHQL", params)
+    .then(
+        ({ data, errors}) => {
 
+            //console.log("GRAPHQL received", data, errors);
 
-    if (params.query.indexOf("$windowId") > 0)
-    {
-        params.variables = {
-            ... params.variables,
-            windowId
-        };
-    }
-
-    return fetch(
-            window.location.origin + contextPath + "/graphql",
+            if (errors)
             {
-                method: "POST",
-                credentials: "same-origin",
-                headers: {
-                    "Content-Type": "application/json",
-
-                    // spring security enforces every POST request to carry a csrf token as either parameter or header
-                    [csrfToken.header] : csrfToken.value
-                },
-                body: JSON.stringify(params)
+                return  Promise.reject(errors);
             }
-        )
-        .then(response => response.json())
-        .then(
-            ({ data, errors}) => {
-                if (errors)
-                {
-                    return  Promise.reject(errors);
-                }
-
-                return data;
-            }
-        );
+            return data;
+        }
+    );
 }
+
+// return fetch(
+//         window.location.origin + contextPath + "/graphql",
+//         {
+//             method: "POST",
+//             credentials: "same-origin",
+//             headers: {
+//                 "Content-Type": "application/json",
+//
+//                 // spring security enforces every POST request to carry a csrf token as either parameter or header
+//                 [csrfToken.header] : csrfToken.value
+//             },
+//             body: JSON.stringify(params)
+//         }
+//     )
+//     .then(response => response.json())

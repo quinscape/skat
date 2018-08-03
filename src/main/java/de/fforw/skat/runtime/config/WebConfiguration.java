@@ -1,6 +1,7 @@
 package de.fforw.skat.runtime.config;
 
 import de.fforw.skat.util.Base32;
+import de.fforw.skat.ws.SkatWebSocketHandler;
 import de.quinscape.domainql.preload.PreloadedGraphQLQueryProvider;
 import de.quinscape.domainql.schema.SchemaDataProvider;
 import de.quinscape.spring.jsview.JsViewResolver;
@@ -8,13 +9,12 @@ import de.quinscape.spring.jsview.loader.ResourceLoader;
 import graphql.schema.GraphQLSchema;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import javax.servlet.ServletContext;
-import java.security.Security;
-import java.util.UUID;
 
 @Configuration
 public class WebConfiguration
@@ -26,18 +26,22 @@ public class WebConfiguration
 
     private final GraphQLSchema graphQLSchema;
 
+    private final SkatWebSocketHandler skatWebSocketHandler;
+
 
     @Autowired
     public WebConfiguration(
         ServletContext servletContext,
         GraphQLSchema graphQLSchema,
-        ResourceLoader resourceLoader
+        ResourceLoader resourceLoader,
+        @Lazy SkatWebSocketHandler skatWebSocketHandler
     )
     {
         this.servletContext = servletContext;
         this.graphQLSchema = graphQLSchema;
         this.resourceLoader = resourceLoader;
 
+        this.skatWebSocketHandler = skatWebSocketHandler;
     }
 
 
@@ -67,7 +71,13 @@ public class WebConfiguration
                     ctx.provideViewData("contextPath", ctx.getRequest().getContextPath());
                     ctx.provideViewData("authentication", auth);
                     ctx.provideViewData("csrfToken", new ClientCrsfToken(token));
-                    ctx.provideViewData("windowId", Base32.uuid());
+
+
+
+                    final String connectionId = Base32.uuid();
+                    ctx.provideViewData("connectionId", connectionId);
+
+                    skatWebSocketHandler.register(connectionId, auth);
                 })
 
                 .build()

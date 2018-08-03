@@ -66,22 +66,12 @@ class Card extends React.Component {
             " scale(" + scale + ") " +
             " translate(" + (-cx) + " " + (-cy) + ")";
 
-        return <React.Fragment>
+        return(
             <g
                 transform={transform}
                 dangerouslySetInnerHTML={ symbol.snippet }
             />
-            <rect
-                x={ x - 2}
-                y={ y - 2}
-                width={4}
-                height={4}
-                style={{
-                    fill: "#f0f"
-                }}
-            >
-            </rect>
-        </React.Fragment>
+        );
     }
 }
 

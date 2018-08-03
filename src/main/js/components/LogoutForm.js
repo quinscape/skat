@@ -29,6 +29,7 @@ class LogoutForm extends React.Component {
                     <form method="POST" action={ contextPath + "/logout" } className="form-inline fa-pull-right">
                         { "Logged in as\u00a0" }
                         <span className="text-info">
+
                         <Icon className="fa-user" title={ jsonTitle }/>
                             { " " + login }
                     </span>

@@ -1,6 +1,6 @@
 .game-container
 {
-    background: #291414;
+    background: #3b2d3b;
 }
 
 
@@ -14,5 +14,16 @@
     fill: #aaa;
     stroke: #ccc;
     stroke-width: 5px;
+}
+
+
+.game-container .seat.current
+{
+    stroke: #000;
+}
+
+.game-container .seat.empty
+{
+    opacity: 0.6;
 }
 

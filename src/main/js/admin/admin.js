@@ -2,7 +2,7 @@ import React from "react"
 
 import rootReducer from "./reducers/index"
 
-import storeFactory from "../services/store-factory"
+import storeFactory from "../services/storeFactory"
 import bootstrap from "jsview-bootstrap"
 import createHistory from "history/createBrowserHistory";
 import AdminApp from "./AdminApp";

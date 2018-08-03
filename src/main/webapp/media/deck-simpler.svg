@@ -27,9 +27,9 @@
      inkscape:window-height="1025"
      id="namedview9013"
      showgrid="false"
-     inkscape:zoom="2"
-     inkscape:cx="446.72318"
-     inkscape:cy="241.86803"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="694.4607"
+     inkscape:cy="235.21981"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
@@ -42,16 +42,16 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <defs
      id="defs161" />
   <g
-     id="symbol:card-6">
+     id="symbol:card-30">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use163"
        d="m 577.76472,159.16539 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.499996 0,-111.499996 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.499996 0,111.499996"
        inkscape:connector-curvature="0" />
@@ -109,9 +109,9 @@
        inkscape:connector-curvature="0" />
   </g>
   <g
-     id="symbol:card-30">
+     id="symbol:card-6">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use175"
        d="m 577.76472,562.33343 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.5 0,-111.5 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.5 0,111.5"
        inkscape:connector-curvature="0" />
@@ -172,9 +172,9 @@
        inkscape:connector-curvature="0" />
   </g>
   <g
-     id="symbol:card-22">
+     id="symbol:card-14">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use187"
        d="m 577.76472,429.5141 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.5 0,-111.5 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.5 0,111.5"
        inkscape:connector-curvature="0" />
@@ -235,9 +235,9 @@
        inkscape:connector-curvature="0" />
   </g>
   <g
-     id="symbol:card-14">
+     id="symbol:card-22">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use199"
        d="m 577.76472,294.33343 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.5 0,-111.5 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.5 0,111.5"
        inkscape:connector-curvature="0" />
@@ -295,9 +295,9 @@
        inkscape:connector-curvature="0" />
   </g>
   <g
-     id="symbol:card-0">
+     id="symbol:card-24">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use571"
        d="m 102.74354,159.16539 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.499996 0,-111.499996 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.499996 0,111.499996"
        inkscape:connector-curvature="0" />
@@ -355,9 +355,9 @@
        inkscape:connector-curvature="0" />
   </g>
   <g
-     id="symbol:card-24">
+     id="symbol:card-0">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use595"
        d="m 102.74354,562.16539 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.5 0,-111.5 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.5 0,111.5"
        inkscape:connector-curvature="0" />
@@ -424,9 +424,9 @@
        inkscape:connector-curvature="0" />
   </g>
   <g
-     id="symbol:card-16">
+     id="symbol:card-8">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use619"
        d="m 102.74354,429.67641 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.5 0,-111.5 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.5 0,111.5"
        inkscape:connector-curvature="0" />
@@ -493,9 +493,9 @@
        inkscape:connector-curvature="0" />
   </g>
   <g
-     id="symbol:card-8">
+     id="symbol:card-16">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use643"
        d="m 102.74354,294.16539 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.5 0,-111.5 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.5 0,111.5"
        inkscape:connector-curvature="0" />
@@ -553,9 +553,9 @@
        inkscape:connector-curvature="0" />
   </g>
   <g
-     id="symbol:card-1">
+     id="symbol:card-25">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use667"
        d="m 181.74354,159.16539 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.499996 0,-111.499996 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.499996 0,111.499996"
        inkscape:connector-curvature="0" />
@@ -625,9 +625,9 @@
        inkscape:connector-curvature="0" />
   </g>
   <g
-     id="symbol:card-25">
+     id="symbol:card-1">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use693"
        d="m 181.74354,562.16539 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.5 0,-111.5 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.5 0,111.5"
        inkscape:connector-curvature="0" />
@@ -707,13 +707,13 @@
        inkscape:connector-curvature="0" />
   </g>
   <g
-     id="symbol:card-17">
+     id="symbol:card-9">
     <g
        id="g10645">
       <path
          d="m 181.74354,429.67641 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.5 0,-111.5 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.5 0,111.5"
          id="use719"
-         style="fill:#ffffff;stroke:#000000;stroke-width:3"
+         style="fill:#ffffff;stroke:#000000;stroke-width:1"
          inkscape:connector-curvature="0" />
       <g
          id="use721"
@@ -792,9 +792,9 @@
     </g>
   </g>
   <g
-     id="symbol:card-9">
+     id="symbol:card-17">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use745"
        d="m 181.74354,294.16539 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.5 0,-111.5 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.5 0,111.5"
        inkscape:connector-curvature="0" />
@@ -864,9 +864,9 @@
        inkscape:connector-curvature="0" />
   </g>
   <g
-     id="symbol:card-2">
+     id="symbol:card-26">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use771"
        d="m 260.74354,159.16539 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.499996 0,-111.499996 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.499996 0,111.499996"
        inkscape:connector-curvature="0" />
@@ -940,9 +940,9 @@
        inkscape:connector-curvature="0" />
   </g>
   <g
-     id="symbol:card-26">
+     id="symbol:card-2">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use799"
        d="m 260.74354,562.16539 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.5 0,-111.5 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.5 0,111.5"
        inkscape:connector-curvature="0" />
@@ -1027,9 +1027,9 @@
        inkscape:connector-curvature="0" />
   </g>
   <g
-     id="symbol:card-18">
+     id="symbol:card-10">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use827"
        d="m 260.74354,429.67641 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.5 0,-111.5 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.5 0,111.5"
        inkscape:connector-curvature="0" />
@@ -1114,9 +1114,9 @@
        inkscape:connector-curvature="0" />
   </g>
   <g
-     id="symbol:card-10">
+     id="symbol:card-18">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use855"
        d="m 260.74354,294.16539 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.5 0,-111.5 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.5 0,111.5"
        inkscape:connector-curvature="0" />
@@ -1190,9 +1190,9 @@
        inkscape:connector-curvature="0" />
   </g>
   <g
-     id="symbol:card-5">
+     id="symbol:card-29">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use883"
        d="m 498.38544,159.16539 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.499996 0,-111.499996 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.499996 0,111.499996"
        inkscape:connector-curvature="0" />
@@ -1270,9 +1270,9 @@
        inkscape:connector-curvature="0" />
   </g>
   <g
-     id="symbol:card-29">
+     id="symbol:card-5">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use913"
        d="m 498.38544,562.16539 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.5 0,-111.5 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.5 0,111.5"
        inkscape:connector-curvature="0" />
@@ -1362,9 +1362,9 @@
        inkscape:connector-curvature="0" />
   </g>
   <g
-     id="symbol:card-21">
+     id="symbol:card-13">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use943"
        d="m 498.38544,429.67641 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.5 0,-111.5 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.5 0,111.5"
        inkscape:connector-curvature="0" />
@@ -1454,9 +1454,9 @@
        inkscape:connector-curvature="0" />
   </g>
   <g
-     id="symbol:card-13">
+     id="symbol:card-21">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use973"
        d="m 498.38544,294.16539 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.5 0,-111.5 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.5 0,111.5"
        inkscape:connector-curvature="0" />
@@ -1534,9 +1534,9 @@
        inkscape:connector-curvature="0" />
   </g>
   <g
-     id="symbol:card-7">
+     id="symbol:card-31">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use1003"
        d="m 656.95499,159.16539 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.499996 0,-111.499996 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.499996 0,111.499996"
        inkscape:connector-curvature="0" />
@@ -2613,9 +2613,9 @@
     </g>
   </g>
   <g
-     id="symbol:card-31">
+     id="symbol:card-7">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use1449"
        d="m 656.95499,562.16539 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.5 0,-111.5 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.5 0,111.5"
        inkscape:connector-curvature="0" />
@@ -5327,9 +5327,9 @@
     </g>
   </g>
   <g
-     id="symbol:card-23">
+     id="symbol:card-15">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use2595"
        d="m 656.95499,429.67641 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.5 0,-111.5 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.5 0,111.5"
        inkscape:connector-curvature="0" />
@@ -6352,9 +6352,9 @@
     </g>
   </g>
   <g
-     id="symbol:card-15">
+     id="symbol:card-23">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use3027"
        d="m 656.95499,294.16539 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.5 0,-111.5 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.5 0,111.5"
        inkscape:connector-curvature="0" />
@@ -7671,9 +7671,9 @@
     </g>
   </g>
   <g
-     id="symbol:card-3">
+     id="symbol:card-27">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use3567"
        d="m 340.72152,159.16539 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.499996 0,-111.499996 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.499996 0,111.499996"
        inkscape:connector-curvature="0" />
@@ -8518,9 +8518,9 @@
     </g>
   </g>
   <g
-     id="symbol:card-27">
+     id="symbol:card-3">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use3929"
        d="m 340.72152,562.16539 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.5 0,-111.5 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.5 0,111.5"
        inkscape:connector-curvature="0" />
@@ -9741,9 +9741,9 @@
     </g>
   </g>
   <g
-     id="symbol:card-19">
+     id="symbol:card-11">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use4459"
        d="m 340.72152,429.67641 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.5 0,-111.5 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.5 0,111.5"
        inkscape:connector-curvature="0" />
@@ -10575,9 +10575,9 @@
     </g>
   </g>
   <g
-     id="symbol:card-11">
+     id="symbol:card-19">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use4825"
        d="m 340.72152,294.16539 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.5 0,-111.5 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.5 0,111.5"
        inkscape:connector-curvature="0" />
@@ -12335,9 +12335,9 @@
     </g>
   </g>
   <g
-     id="symbol:card-4">
+     id="symbol:card-28">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use5571"
        d="m 419.72152,159.16539 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.499996 0,-111.499996 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.499996 0,111.499996"
        inkscape:connector-curvature="0" />
@@ -13580,9 +13580,9 @@
     </g>
   </g>
   <g
-     id="symbol:card-28">
+     id="symbol:card-4">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use6087"
        d="m 419.72152,562.16539 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.5 0,-111.5 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.5 0,111.5"
        inkscape:connector-curvature="0" />
@@ -14546,9 +14546,9 @@
     </g>
   </g>
   <g
-     id="symbol:card-20">
+     id="symbol:card-12">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use6477"
        d="m 419.72152,429.67641 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.5 0,-111.5 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.5 0,111.5"
        inkscape:connector-curvature="0" />
@@ -16014,9 +16014,9 @@
     </g>
   </g>
   <g
-     id="symbol:card-12">
+     id="symbol:card-20">
     <path
-       style="fill:#ffffff;stroke:#000000;stroke-width:3"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
        id="use7081"
        d="m 419.72152,294.16539 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.5 0,-111.5 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.5 0,111.5"
        inkscape:connector-curvature="0" />
@@ -16914,20 +16914,20 @@
   <path
      d="m 841.39923,364.98444 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.5 0,-111.5 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.5 0,111.5"
      id="use7445"
-     style="fill:#ffffff;stroke:#000000;stroke-width:3"
+     style="fill:#ffffff;stroke:#000000;stroke-width:1"
      inkscape:connector-curvature="0" />
   <path
      d="m 920.39924,364.98444 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.76101,0 -5.00001,-2.238 -5.00001,-5 0,0 0,-111.5 0,-111.5 0,-2.762 2.239,-5 5.00001,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.5 0,111.5"
      id="use7447"
-     style="fill:#ffffff;stroke:#000000;stroke-width:3"
+     style="fill:#ffffff;stroke:#000000;stroke-width:1"
      inkscape:connector-curvature="0" />
   <path
      d="m 999.39924,364.98444 c 0,2.762 -2.238,5 -5,5 0,0 -67.5,0 -67.5,0 -2.761,0 -5,-2.238 -5,-5 0,0 0,-111.5 0,-111.5 0,-2.762 2.239,-5 5,-5 0,0 67.5,0 67.5,0 2.762,0 5,2.238 5,5 0,0 0,111.5 0,111.5"
      id="use7449"
-     style="fill:#ffffff;stroke:#000000;stroke-width:3"
+     style="fill:#ffffff;stroke:#000000;stroke-width:1"
      inkscape:connector-curvature="0" />
   <g
-     id="g9009">
+     id="symbol:card-32">
     <path
        d="m 928.27662,248.55335 c 0,0 64.6686,0 64.6686,0 1.69039,0 3.31155,0.70327 4.50683,1.95509 1.19529,1.25182 1.86679,2.94965 1.86679,4.71999 0,0 0,108.7046 0,108.7046 0,1.77034 -0.6715,3.46817 -1.86679,4.71999 -1.19528,1.25182 -2.81644,1.95508 -4.50683,1.95508 0,0 -64.6686,0 -64.6686,0 -1.69039,0 -3.31154,-0.70326 -4.50683,-1.95508 -1.19528,-1.25182 -1.86679,-2.94965 -1.86679,-4.71999 0,0 0,-108.7046 0,-108.7046 0,-1.77034 0.67151,-3.46817 1.86679,-4.71999 1.19529,-1.25182 2.81644,-1.95509 4.50683,-1.95509"
        id="path7451"

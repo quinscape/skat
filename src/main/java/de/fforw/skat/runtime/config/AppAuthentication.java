@@ -50,6 +50,10 @@ public class AppAuthentication
             final AppUserDetails details = (AppUserDetails) authentication.getPrincipal();
             return new AppAuthentication(details.getUsername(), details.getRoles(), details.getId());
         }
+        if (authentication != null && authentication.getPrincipal() instanceof AppAuthentication)
+        {
+            return (AppAuthentication) authentication.getPrincipal();
+        }
         else
         {
             return ANONYMOUS;
@@ -72,5 +76,16 @@ public class AppAuthentication
     public String getId()
     {
         return id;
+    }
+
+
+    @Override
+    public String toString()
+    {
+        return super.toString() + ": "
+            + "login = '" + login + '\''
+            + ", roles = " + roles
+            + ", id = '" + id + '\''
+            ;
     }
 }

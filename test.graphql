@@ -1,0 +1,15 @@
+{
+    listFoos(offset: 0, limit: 10)
+    {
+        foos{
+            id
+            name
+            description
+            num
+            created
+            typeId
+            ownerId
+        }
+        rowCount
+    }
+}
