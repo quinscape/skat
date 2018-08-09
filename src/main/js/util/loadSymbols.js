@@ -21,6 +21,43 @@ function transformChain(group)
     return transform;
 }
 
+function cleanupRecursive(group)
+{
+    let node = group.firstChild;
+
+    while (node)
+    {
+        if (node.nodeType === 1)
+        {
+            const attrNames = node.getAttributeNames();
+
+            let removed = false;
+            for (let i = 0; i < attrNames.length; i++)
+            {
+                const name = attrNames[i];
+                if (name.indexOf("inkscape:") === 0 || name.indexOf("sodipodi:") === 0)
+                {
+                    node.removeAttribute(name);
+                    removed = true;
+                }
+            }
+
+            cleanupRecursive(node);
+        }
+        node = node.nextSibling;
+    }
+}
+
+function cleanup(group)
+{
+    if (typeof group.getAttributeNames === "function")
+    {
+        cleanupRecursive(group);
+    }
+}
+
+
+
 export default function(uri) {
     return loadSVG(uri).then(doc => {
 
@@ -46,6 +83,7 @@ export default function(uri) {
 
                 const aabb = group.getBoundingClientRect();
 
+                cleanup(group);
 
                 const name = m[1];
                 //console.log("SYMBOL", name, aabb);

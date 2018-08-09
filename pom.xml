@@ -24,8 +24,6 @@
         <java.version>1.8</java.version>
         <spring.core.version>5.0.6.RELEASE</spring.core.version>
         <atomikos.version>3.9.3</atomikos.version>
-        <!-- Make sure to retain method parameter names for metadata purposes -->
-        <maven.compiler.parameters>true</maven.compiler.parameters>
     </properties>
 
     <dependencies>
@@ -83,7 +81,7 @@
         <dependency>
             <groupId>de.quinscape.domainql</groupId>
             <artifactId>domainql</artifactId>
-            <version>0.8-SNAPSHOT</version>
+            <version>0.10</version>
         </dependency>
 
         <dependency>
@@ -163,6 +161,13 @@
             <version>1.2</version>
         </dependency>
         <!-- ATOMIKOS END-->
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.14.0</version>
+        </dependency>
+
 
     </dependencies>
 
@@ -308,7 +313,7 @@
                             <inputSchema>public</inputSchema>
                         </database>
                         <target>
-                            <packageName>de.fforw.skat.domain</packageName>
+                            <packageName>de.quinscape.domainql.skat.domain</packageName>
                             <directory>src/main/java</directory>
                         </target>
                         <generate>
@@ -322,6 +327,18 @@
                     </generator>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <compilerArgs>
+                        <arg>-parameters</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 

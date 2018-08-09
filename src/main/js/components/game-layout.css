@@ -1,0 +1,88 @@
+.game-container
+{
+    position: relative;
+    background: #3b2d3b;
+}
+
+
+.game-container .table
+{
+    fill: #278743;
+}
+
+.game-container .seat
+{
+    fill: #aaa;
+    stroke: #b36d6b;
+    stroke-width: 5px;
+}
+
+
+.game-container .seat.current
+{
+    fill: #80a7ae;
+    stroke: #17a2b8;
+}
+
+.game-container .seat.empty
+{
+    opacity: 0.6;
+}
+
+
+.game-container .score-meter-fill
+{
+    fill: #fff;
+    opacity: 0.05;
+}
+
+.game-container .score-meter
+{
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 4px;
+    opacity: 0.3;
+}
+
+
+.game-container .win-line
+{
+    stroke: #fff;
+    stroke-width: 2px;
+    opacity: 0.3;
+}
+
+.game-container .schneider-line
+{
+    stroke: #fff;
+    stroke-width: 2px;
+    opacity: 0.5;
+}
+
+.game-container .declarer
+{
+    fill: #00fffa;
+    opacity: 0.6;
+}
+
+g.card
+{
+    cursor: pointer;
+}
+
+g.card.disabled
+{
+    cursor: not-allowed;
+}
+
+g.card.face-down
+{
+    cursor: default;
+}
+
+.game-container .opposition
+{
+    fill: #ff0900;
+    opacity: 0.3;
+}
+

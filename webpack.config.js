@@ -31,6 +31,9 @@ module.exports = {
         path: JS_OUTPUT_DIRECTORY,
         filename: "bundle-[name]-[chunkhash].js",
         chunkFilename: "bundle-[id]-[chunkhash].js",
+
+        library: "Skat",
+        libraryTarget: "var",
     },
     plugins: [
         new MiniCssExtractPlugin({
@@ -71,13 +74,6 @@ module.exports = {
                 test: /\.css$/,
                 exclude: /node_modules/,
                 use: [ MiniCssExtractPlugin.loader, "css-loader" ]
-            },
-
-            {
-                test: /\.svg/,
-                use: {
-                    loader: "symbol-loader"
-                }
             }
         ]
     },

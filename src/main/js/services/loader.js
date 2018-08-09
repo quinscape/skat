@@ -48,7 +48,6 @@ export default function (svgFiles) {
             resolve(Promise.all(promises));
 
         }).then( array => {
-            console.log(array);
 
             const merged = {};
             for (let i = 0; i < array.length; i++)

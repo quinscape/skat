@@ -9,9 +9,9 @@ import {
 import { ConnectedRouter } from "connected-react-router"
 import { Container, } from "reactstrap"
 
-import About from "./routes/About";
-import Lobby from "./routes/Lobby";
-import Game from "./routes/Game";
+import About from "../components/routes/About";
+import Lobby from "../components/routes/Lobby";
+import Game from "../components/game/Game";
 import config from "../services/config";
 import LogoutForm from "../components/LogoutForm";
 // noinspection ES6UnusedImports
@@ -44,7 +44,7 @@ class SkatCardsGame extends React.Component {
                     <div id="footer" className="clearfix">
                         <button
                             type="button"
-                            className="btn btn-link"
+                            className="action-flush-games btn btn-link"
                             onClick={ flushGames }
                         >
                             <strong>

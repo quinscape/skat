@@ -16,8 +16,9 @@ import { Provider } from "react-redux"
 import loader from "../services/loader";
 import Hub from "../services/hub";
 
-
 const history = createHistory();
+
+let _store;
 
 bootstrap(
     initial => {
@@ -30,19 +31,22 @@ bootstrap(
         // noinspection JSUnresolvedVariable
         __webpack_public_path__ = config().contextPath + "/js/";
 
-        const store = storeFactory(
+        _store = storeFactory(
             rootReducer,
+            // build initial redux state from static defaults and initial data (BUILD_INITIAL)
             {
-                gameList: initial.gameList.currentGameList
+                gameList: initial.gameList.currentGameList,
+                calculator: null,
+                userConfig: initial.userConfig.userConfig
             },
             history
         );
 
         Hub.register("PUSH_ACTION", ({payload, id}) => {
 
-            //console.log("PUSH_ACTION", payload, "id = ", id);
+//            console.log("PUSH_ACTION", payload, "id = ", id);
             
-            store.dispatch(
+            _store.dispatch(
                 pushAction(payload, id)
             );
         });
@@ -50,20 +54,19 @@ bootstrap(
         return Promise.all([
             Hub.init(initial.connectionId),
             loader([
-                "/media/deck-simpler.svg"
+                "/media/deck4.svg"
             ])
         ]).then( ([ connectionId, symbols]) => {
 
-
-            //console.log("SYMBOLS", symbols);
+            console.log( "SYMBOLS", Object.keys(symbols).sort());
 
             return (
-                <Provider store={store}>
+                <Provider store={_store}>
                     <FormConfigProvider
                         schema={initial.schema}
                     >
                         <SkatCardsGame
-                            store={store}
+                            store={_store}
                             history={history}
                         />
                     </FormConfigProvider>
@@ -74,9 +77,26 @@ bootstrap(
     () => console.info("ready!")
 );
 
+/**
+ * Exported as "Skat.store()" into the browser env.
+ */
+export function store()
+{
+    return _store;
+}
+
+/**
+ * Exported as "Skat.state()" into the browser env.
+ */
+export function state()
+{
+    return _store.getState();
+}
+
 export const PRELOADED_QUERIES = {
     // language=GraphQL
     gameList: `
+        query currentGameList
         {
             currentGameList{
                 channels{
@@ -90,6 +110,16 @@ export const PRELOADED_QUERIES = {
                 rowCount
             }
         }
+    `,
+    // language=GraphQL
+    userConfig: `
+        query userConfig
+        {
+            userConfig{
+                id
+                userId
+                lockBidding
+            }
+        }
     `
 };
- 

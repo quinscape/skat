@@ -16,7 +16,7 @@ function createWebSocket(cid, resolve, reject)
     ws = new WebSocket(url);
 
     ws.onopen = function () {
-        console.log("ws.onopen");
+        //console.log("ws.onopen");
 
         wasConnected = true;
         attempts = 0;
@@ -24,7 +24,7 @@ function createWebSocket(cid, resolve, reject)
         resolve(cid);
     };
     ws.onclose = function () {
-        console.log("ws.onclose");
+        //console.log("ws.onclose");
         if (!wasConnected || attempts > 2)
         {
             preferFallback = true;
@@ -43,7 +43,7 @@ function createWebSocket(cid, resolve, reject)
         reject(err);
     };
     ws.onmessage = ev => {
-        console.log("ws.onMessage", ev);
+        //console.log("ws.onMessage", ev);
         const data = JSON.parse(ev.data);
 
         //console.debug("RECEIVE: %o", data);
@@ -55,7 +55,6 @@ function createWebSocket(cid, resolve, reject)
         }
         else
         {
-            console.log("handlers", array);
             try
             {
                 array.forEach(handler => handler(data));

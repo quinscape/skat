@@ -16,13 +16,65 @@
     
 }
 
-.list-group-item span.current
+tr.current
 {
-    font-weight: bold;
+    background: #fff;
 }
 
 .list-group-item .pos
 {
     position: absolute;
     right: 11ex;
+}
+
+button svg
+{
+    display: inline-block;
+}
+
+.suit-black
+{
+    color: #000;
+}
+.suit-red
+{
+    color: #df0000;
+}
+
+.suit-unicode
+{
+    font-size: 1.2em;
+}
+
+
+strong.text-muted
+{
+    font-weight: normal;
+}
+
+#declaring-widget
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #fff;
+    width: 800px;
+}
+
+.card-log-red
+{
+    font-weight: bold;
+    font-style: italic;
+    color: #df0000 !important;
+}
+
+.card-log-black
+{
+    font-weight: bold;
+    font-style: italic;
+    color: #000000;
+}
+
+.large{
+    font-size: 1.4em;
 }

@@ -58,7 +58,7 @@ export default function (rootReducer, initialState, history)
             // Support thunks for async actions
             thunk,
             // log all sync actions
-            //logger
+            logger
         )
     );
 }

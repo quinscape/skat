@@ -1,24 +1,59 @@
 import {
+    CALCULATOR_SETTINGS_STORE,
     GAME_ACTIVATE,
-    PUSH_CHANNEL_UPDATE
+    PUSH_CHANNEL_UPDATE,
+    LOG_ENTRY_ADD,
+    HAND_REPLACE,
+    USER_CONFIG_UPDATE
 } from "../actions";
+import { getCalculatorDefaults } from "../../components/calculator/Calculator";
 
-const INITIAL_STATE = {
-    gameList: {
-        channels: [],
-        rowCount: 0
-    },
-    currentChannel: null
-};
+import update from "immutability-helper"
 
-export default function(state = INITIAL_STATE, action)
+
+function removeEntries(logEntries, removedLogEntries)
+{
+    if (!removedLogEntries || removedLogEntries.length === 0)
+    {
+        return logEntries;
+    }
+
+    const out = [];
+    for (let i = 0; i < logEntries.length; i++)
+    {
+        const e = logEntries[i];
+        if (removedLogEntries.indexOf(e.id) < 0)
+        {
+            out.push(e);
+        }
+    }
+
+    return out;
+}
+
+// default state built in game.js (BUILD_INITIAL)
+export default function(state = null, action)
 {
     switch (action.type)
     {
+
+
         case GAME_ACTIVATE:
+        {
+            const { channel } = action;
+            const { current: { hand } } = channel;
+
             return {
                 ... state,
-                currentChannel: action.channel
+                currentChannel: action.channel,
+                calculator: getCalculatorDefaults(hand)
+            };
+        }
+        case CALCULATOR_SETTINGS_STORE:
+
+            return {
+                ... state,
+                calculator: action.calculator
             };
 
         case PUSH_CHANNEL_UPDATE:
@@ -27,27 +62,45 @@ export default function(state = INITIAL_STATE, action)
 
             const { channel: newChannel, hand: newHand } = action;
 
-            if (currentChannel.id === newChannel.id)
+            if (!currentChannel || currentChannel.id === newChannel.id)
             {
+                const logEntries = currentChannel ? currentChannel.logEntries.concat(newChannel.logEntries) : newChannel.logEntries;
                 const mergedChannel = {
                     ...newChannel,
                     current: {
                         ...newChannel.current,
                         hand: newHand
                     },
-                    chatMessages: currentChannel.chatMessages.concat(newChannel.chatMessages)
+                    logEntries: removeEntries(logEntries, newChannel.removedLogEntries)
                 };
 
-                //console.log("MERGED CHAT", currentChannel.chatMessages, newChannel.chatMessages)
+                //console.log("MERGED CHAT", currentChannel.logEntries, newChannel.logEntries)
 
                 return {
                     ... state,
-                    currentChannel: mergedChannel
+                    currentChannel: mergedChannel,
+                    calculator: state.calculator ? state.calculator : getCalculatorDefaults(newHand)
                 }
-
             }
             return state;
         }
+        case USER_CONFIG_UPDATE:
+        {
+            return {
+                ... state,
+                userConfig: action.userConfig
+            };
+        }
+
+        case HAND_REPLACE:
+
+            return update(state,{
+                currentChannel: {
+                    current: {
+                        hand: { $set: action.hand }
+                    }
+                }
+            });
     }
 
     return state;
@@ -65,3 +118,19 @@ export function getCurrentChannel(state)
 }
 
 
+export function getCalculatorData(state)
+{
+    return state.calculator;
+}
+
+
+export function getCalculatorResult(state)
+{
+    const calculator = getCalculatorData(state);
+    return calculator ? calculator.result : null;
+}
+
+export function getUserConfig(state)
+{
+    return state.userConfig;
+}

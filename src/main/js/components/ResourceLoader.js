@@ -74,24 +74,20 @@ class ResourceLoader extends React.Component {
         })
     }
 
-    onLoadImage = ev => {
-
-        const { count } = this.state;
-
-        //console.log("onLoadImage", ev.target);
-
-        this.setState({
-            done : count + 1,
+    onLoadImage = ev =>  this.setState(
+        state => ({
+            done : state.done + 1,
         })
-    };
+    );
 
     render()
     {
         const { children } = this.props;
         const { count, done } = this.state;
 
-        //console.log({ count, done });
-        if (done === count)
+        //console.log("ResourceLoader", { count, done });
+        
+        if (done < count)
         {
             return (
                 <p className="resource-throbber text-md-center">Loading...</p>
