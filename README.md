@@ -1,3 +1,4 @@
+![Skat Game Logo](https://raw.githubusercontent.com/quinscape/skat/master/src/main/webapp/media/logo.png)
 # Skat Cards Game
 
 Another domainQL example application.
