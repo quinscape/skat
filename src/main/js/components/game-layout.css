@@ -65,6 +65,12 @@
     opacity: 0.6;
 }
 
+.game-container .declarer-potential
+{
+    fill: #00fffa;
+    opacity: 0.25;
+}
+
 g.card
 {
     cursor: pointer;

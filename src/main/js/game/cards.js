@@ -20,6 +20,7 @@ export const CARD = {
 };
 
 
+export const CARD_SCORES = [0,0,0,3,4,10,11,2];
 
 export function cardIndex(suite, card)
 {
@@ -42,3 +43,7 @@ export function cardURI(suite, card)
     return media.CARDS[cardIndex(suite, card)];
 }
 
+export function normalizeCard(card)
+{
+    return Math.abs(card) - 1;
+}

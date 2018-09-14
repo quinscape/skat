@@ -18,6 +18,7 @@ const TIME_PER_CARD_OFF_SCREEN = 40;
 
 const GROUP2_OFFSET = TIME_PER_CARD_OFF_SCREEN * 8;
 const GROUP3_OFFSET = GROUP2_OFFSET + TIME_PER_CARD_OFF_SCREEN * 8;
+const SKAT_OFFSET = GROUP3_OFFSET + TIME_PER_CARD_OFF_SCREEN * 6;
 
 const CARD_DELAYS = [
     0,
@@ -31,12 +32,11 @@ const CARD_DELAYS = [
 
     TIME_PER_CARD * 7 + GROUP3_OFFSET,
     TIME_PER_CARD * 8 + GROUP3_OFFSET,
-    TIME_PER_CARD * 9 + GROUP3_OFFSET
+    TIME_PER_CARD * 9 + GROUP3_OFFSET,
+
+    TIME_PER_CARD * 10 + SKAT_OFFSET,
+    TIME_PER_CARD * 11 + SKAT_OFFSET
 ];
-
-const ANIMATION_END_OFFSET = CARD_DELAYS[CARD_DELAYS.length - 1] + ANIMATION_TIME;
-
-console.log({ANIMATION_END_OFFSET});
 
 /**
  * We're going to animate the cards along eased bezier paths, all with a common start point at the top, a random
@@ -60,6 +60,10 @@ function createAnimationControlPoints()
         (1000 + ANIMATION_START_Y) * 0.3
     );
 
+    const pt3 = new Vector(
+        (900 + ANIMATION_START_X) * 0.5 + 400 + Math.random() * 400,
+        (1000 + ANIMATION_START_Y) * 0.3
+    );
 
     return [
         pt0,
@@ -75,8 +79,8 @@ function createAnimationControlPoints()
         pt2,
         pt2,
 
-        pt2,
-        pt2
+        pt3,
+        pt3
     ];
 }
 
@@ -134,8 +138,13 @@ class GameCards extends React.Component {
         {
             const now = Date.now();
 
-            if (now - animation.start > ANIMATION_END_OFFSET)
+
+            const { cards } = this.props.currentChannel.current.hand;
+
+            if (now - animation.start > CARD_DELAYS[cards.length - 1] + ANIMATION_TIME)
             {
+                console.log("Stop animating");
+
                 this.setState({
                     animation: {
                         ... animation.start,
