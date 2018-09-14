@@ -43,10 +43,18 @@ Otherwise it just uses a square playing field in device screen width and the sid
 
 ### SVG animation
 
-The cards are JavaScript-animated due to the complications of combining SVG and css transformations ans the staggered display etc.
-The animation positions are eased along a quadratic bezier curve.
+The cards are JavaScript-animated due to the complications of combining SVG and css transformations and the 
+time-staggered display etc.
 
+The [GameCards component](https://github.com/quinscape/skat/blob/master/src/main/js/components/game/GameCards.js) acts 
+as animation container.
+It enters animation mode on a detecting the "dealer starts dealing" condition. It remembers the start time and calling 
+requestAnimationFrame() to refresh the container component drawing the current state of the animation at current time 
+delta. 
 
+The cards are following quadratic bezier curves with a common starting point, the final spread-out position and a random
+control point. The position along those paths is eased with a 
+[common easing function](https://github.com/quinscape/skat/blob/master/src/main/js/util/easing.js).
 
 ## Hybrid DomainQL / Spring websocket comm
 
