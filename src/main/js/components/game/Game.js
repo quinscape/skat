@@ -372,6 +372,7 @@ class Game extends React.Component {
                                                 <defs>
                                                     <ScoreMeter
                                                         defs={ true }
+                                                        phase={ phase }
                                                         current={ current }
                                                         containerWidth={ effectiveWidth }
                                                         containerHeight={ height }
@@ -384,6 +385,7 @@ class Game extends React.Component {
                                                     current={ doesParticipate ? hand.gameUser.name : null }
                                                 />
                                                 <ScoreMeter
+                                                    phase={ phase }
                                                     current={ current }
                                                     containerWidth={ effectiveWidth }
                                                     containerHeight={ height }

@@ -31,7 +31,7 @@ class ScoreMeter extends React.Component {
 
     render()
     {
-        const { current, containerWidth, containerHeight, defs } = this.props;
+        const { phase, current, containerWidth, defs } = this.props;
 
         const w = (containerWidth* 0.9)|0;
         const h = w / 40;
@@ -58,20 +58,23 @@ class ScoreMeter extends React.Component {
 
         const roundingRadius = w * 0.01;
 
-        const isDeclarer = currentPosition === bidding.declarer;
+        const drawSpeculativeScore = currentPosition !== bidding.declarer && phase === "PLAYING";
 
-        // if we're not the declarer, we need to estimate their points
-        // what we have in hand or what is in the trick, the declarer can't have
+
         let scoreInHand;
-        if (isDeclarer)
+        if (drawSpeculativeScore)
         {
-            // doesn't matter, we know the score
-            scoreInHand = 0;
+            // if we're rendering speculative score, we draw-in what the declarer could possibly have
+            // on hand. That is 22 points minus the points we currently see on hand and in trick.
+            //
+            // We do not account for played cards (e.g. all aces gone).
+            //
+            // sum up score of hand and current trick
+            scoreInHand = cards.reduce(reduceScore, 0) + trick.reduce(reduceScore, 0);
         }
         else
         {
-            // sum up score of hand and current trick
-            scoreInHand = cards.reduce(reduceScore, 0) + trick.reduce(reduceScore, 0);
+            scoreInHand = 0;
         }
 
         if (defs)
@@ -112,7 +115,7 @@ class ScoreMeter extends React.Component {
                         height={ h }
                     />
                     {
-                        !isDeclarer && (
+                        drawSpeculativeScore && (
                             <rect
                                 className="declarer-potential"
                                 x={ xStart + declarerWidth}
