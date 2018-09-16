@@ -2,7 +2,6 @@ import {
     CALCULATOR_SETTINGS_STORE,
     GAME_ACTIVATE,
     PUSH_CHANNEL_UPDATE,
-    LOG_ENTRY_ADD,
     HAND_REPLACE,
     USER_CONFIG_UPDATE
 } from "../actions";
@@ -29,6 +28,13 @@ function removeEntries(logEntries, removedLogEntries)
     }
 
     return out;
+}
+
+function skatPickedUpIn(currentChannel)
+{
+    return currentChannel && currentChannel.current.bidding ?
+        currentChannel.current.bidding.skatPickedUp :
+        null;
 }
 
 // default state built in game.js (BUILD_INITIAL)
@@ -76,18 +82,8 @@ export default function(state = null, action)
 
                 //console.log("MERGED CHAT", currentChannel.logEntries, newChannel.logEntries)
 
-                const skatPickedUpChange = (
-                    currentChannel &&
-                    currentChannel.current.bidding ?
-                        currentChannel.current.bidding.skatPickedUp :
-                        null
-                ) !== (
-                    newChannel &&
-                    newChannel.current.bidding ?
-                        newChannel.current.bidding.skatPickedUp :
-                        null
-                );
-                
+                const skatPickedUpChange = skatPickedUpIn(currentChannel) !== skatPickedUpIn(newChannel);
+
                 return {
                     ... state,
                     currentChannel: mergedChannel,

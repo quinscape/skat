@@ -9,12 +9,12 @@ import Vector from "../../util/vector";
 import quadraticBezier from "../../util/quadraticBezier";
 
 
-const ANIMATION_TIME = 750;
-const ANIMATION_START_X = -300;
+const ANIMATION_TIME = 700;
+const ANIMATION_START_X = 250;
 const ANIMATION_START_Y = -300;
 
 const TIME_PER_CARD = 220;
-const TIME_PER_CARD_OFF_SCREEN = 40;
+const TIME_PER_CARD_OFF_SCREEN = 18;
 
 const GROUP2_OFFSET = TIME_PER_CARD_OFF_SCREEN * 8;
 const GROUP3_OFFSET = GROUP2_OFFSET + TIME_PER_CARD_OFF_SCREEN * 8;
@@ -46,22 +46,22 @@ function createAnimationControlPoints()
 {
 
     const pt0 = new Vector(
-        (ANIMATION_START_X) * 0.5 - 400 + Math.random() * 400,
+        (ANIMATION_START_X) * 0.5 - 500 + Math.random() * 500,
         (1000 + ANIMATION_START_Y) * 0.3
     );
 
     const pt1 = new Vector(
-        (300 + ANIMATION_START_X) * 0.5 - 200 + Math.random() * 400,
+        (300 + ANIMATION_START_X) * 0.5 - 250 + Math.random() * 500,
         (1000 + ANIMATION_START_Y) * 0.7
     );
 
     const pt2 = new Vector(
-        (700 + ANIMATION_START_X) * 0.5 + 400 + Math.random() * 400,
+        (700 + ANIMATION_START_X) * 0.5 + Math.random() * 500,
         (1000 + ANIMATION_START_Y) * 0.3
     );
 
     const pt3 = new Vector(
-        (900 + ANIMATION_START_X) * 0.5 + 400 + Math.random() * 400,
+        (900 + ANIMATION_START_X) * 0.5 + Math.random() * 500,
         (1000 + ANIMATION_START_Y) * 0.3
     );
 
