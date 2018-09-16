@@ -113,7 +113,7 @@ public class ChannelLogic
 
 
     @GraphQLMutation
-    public boolean joinGame(SkatClientConnection conn, String secret)
+    public String joinGame(SkatClientConnection conn, String secret, String userName)
     {
 
         final String connectionId = conn.getConnectionId();
@@ -124,19 +124,21 @@ public class ChannelLogic
         Channel channel = getChannel(secret);
 
         PreparedMessages preparedMessages = null;
+        GameUser newUser = null;
         synchronized (channel)
         {
 
             final List<GameUser> users = channel.getUsers();
             final List<GameUser> seating = channel.getCurrent().getSeating();
+
+            newUser = GameUser.fromAuth(auth, connectionId, userName);
+
             if (
                 users.stream().noneMatch(
                     u -> u.getConnectionId().equals(connectionId)
                 )
             )
             {
-                final GameUser newUser = GameUser.fromAuth(auth, connectionId);
-
                 final GameRound current = channel.getCurrent();
                 if (current.getPhase() == GamePhase.OPEN || newUser.getType() == GameUserType.TEST_USER)
                 {
@@ -216,7 +218,7 @@ public class ChannelLogic
             preparedMessages.sendAll(skatWebSocketHandler);
         }
 
-        return true;
+        return newUser.getName();
     }
 
     private Channel getChannel(String secret)

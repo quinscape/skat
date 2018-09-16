@@ -75,9 +75,9 @@ public class CoreGameLogicTest
         channel = new Channel(CHANNEL_ID);
 
         channel.setUsers(Arrays.asList(
-            GameUser.fromAuth(connectionA.getAuth(), connectionA.getConnectionId()),
-            GameUser.fromAuth(connectionB.getAuth(), connectionB.getConnectionId()),
-            GameUser.fromAuth(connectionC.getAuth(), connectionC.getConnectionId())
+            GameUser.fromAuth(connectionA.getAuth(), connectionA.getConnectionId(), null),
+            GameUser.fromAuth(connectionB.getAuth(), connectionB.getConnectionId(), null),
+            GameUser.fromAuth(connectionC.getAuth(), connectionC.getConnectionId(), null)
         ));
 
         newGameRound(0);

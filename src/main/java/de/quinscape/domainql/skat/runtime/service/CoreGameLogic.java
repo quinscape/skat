@@ -291,7 +291,7 @@ public class CoreGameLogic
 
 
     @GraphQLMutation
-    public boolean sit(SkatClientConnection conn, String secret, int seatIndex)
+    public boolean sit(SkatClientConnection conn, String secret, int seatIndex, String userName)
     {
 
         final Channel channel = channelRepository.getChannelById(secret);
@@ -312,7 +312,7 @@ public class CoreGameLogic
                 seating.set(currentSeat, null);
             }
 
-            seating.set(seatIndex, GameUser.fromAuth(conn.getAuth(), conn.getConnectionId()));
+            seating.set(seatIndex, GameUser.fromAuth(conn.getAuth(), conn.getConnectionId(), userName));
             preparedMessages = channel.prepareUpdate(
                 null,
                 LogEntry.action(

@@ -20,13 +20,13 @@ public class GameUser
     private final boolean active;
 
 
-    public static GameUser fromAuth(AppAuthentication auth, String connectionId)
+    public static GameUser fromAuth(AppAuthentication auth, String connectionId, String existingName)
     {
         final GameUserType type = GameUserType.getType(auth.getRoles());
         return  new GameUser(
             auth.getId(),
             type == GameUserType.TEST_USER ?
-                createUnique(auth.getLogin()) :
+                existingName != null ? existingName : createUnique(auth.getLogin()) :
                 auth.getLogin(),
             type,
             connectionId,

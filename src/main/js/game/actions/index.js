@@ -1,6 +1,7 @@
 import { push } from "connected-react-router"
 import graphql, { defaultErrorHandler } from "../../services/graphql";
 
+export const SKAT_USER_NAME = "SKAT_USER_NAME";
 
 export const GAME_ACTIVATE = "GAME_UPDATE_ACTIVATE";
 export const CALCULATOR_SETTINGS_STORE = "CALCULATOR_SETTINGS_STORE";
@@ -92,9 +93,9 @@ export function createGame(channelId, isPublic = true)
 
 // language=GraphQL
 const JOIN_GAME_MUTATION = `
-    mutation joinGame($channelId : String)
+    mutation joinGame($channelId : String, $userName: String)
     {
-        joinGame(secret: $channelId)
+        joinGame(secret: $channelId, userName: $userName)
     }
 `;
 
@@ -102,16 +103,23 @@ export function joinGame(id)
 {
     return (dispatch, getState) => {
 
+        const userName = sessionStorage.getItem(SKAT_USER_NAME);
+
         return graphql({
             query: JOIN_GAME_MUTATION,
             variables: {
-                channelId: id
+                channelId: id,
+                userName
             }
         }).then(
             ({ joinGame }) => {
 
                if (joinGame)
                {
+                   console.log("Logged in as " + joinGame);
+
+                   sessionStorage.setItem(SKAT_USER_NAME, joinGame);
+
                    dispatch(
                        push("/game/" + id)
                    );
