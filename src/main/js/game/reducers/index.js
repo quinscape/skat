@@ -76,10 +76,22 @@ export default function(state = null, action)
 
                 //console.log("MERGED CHAT", currentChannel.logEntries, newChannel.logEntries)
 
+                const skatPickedUpChange = (
+                    currentChannel &&
+                    currentChannel.current.bidding ?
+                        currentChannel.current.bidding.skatPickedUp :
+                        null
+                ) !== (
+                    newChannel &&
+                    newChannel.current.bidding ?
+                        newChannel.current.bidding.skatPickedUp :
+                        null
+                );
+                
                 return {
                     ... state,
                     currentChannel: mergedChannel,
-                    calculator: state.calculator ? state.calculator : getCalculatorDefaults(newHand)
+                    calculator: !state.calculator || skatPickedUpChange ? getCalculatorDefaults(newHand) : state.calculator
                 }
             }
             return state;

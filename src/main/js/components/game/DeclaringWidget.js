@@ -107,9 +107,11 @@ class DeclaringWidget extends React.Component {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col">
+
                             <h5>Declare Game</h5>
                             <hr className="p-0 mt-0 mb-3"/>
                             <Calculator
+                                key={ "k" + bidding.skatPickedUp }
                                 hand={ hand }
                                 calculator={ calculator }
                                 onSubmit={ this.changeGameValue }
