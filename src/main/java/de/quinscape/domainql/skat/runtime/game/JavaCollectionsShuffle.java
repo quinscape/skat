@@ -19,4 +19,11 @@ public class JavaCollectionsShuffle
         Collections.shuffle(copy, random);
         return copy;
     }
+
+
+    @Override
+    public String describe()
+    {
+        return "Java Collections.shuffle() based shuffle";
+    }
 }

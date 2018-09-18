@@ -13,6 +13,7 @@ import {
     joinGame,
     storeCalculatorSettings,
     storeUserConfig,
+    storeOptions,
     pickUpSkat,
     declareGame,
     playCard
@@ -22,7 +23,8 @@ import ScoreMeter from "./ScoreMeter";
 import {
     ButtonToolbar,
     Modal,
-    ModalBody
+    ModalBody,
+    ModalHeader
 } from "reactstrap"
 
 import Icon from "../Icon";
@@ -35,6 +37,7 @@ import { GOLDEN_RATIO } from "../calculator/SymbolButton";
 import DeclaringWidget from "./DeclaringWidget";
 import GameCards from "./GameCards";
 import Vector from "../../util/vector";
+import OptionsForm from "./OptionsForm";
 
 
 const EMPTY_SEATING = [];
@@ -51,6 +54,9 @@ const NONE_LEGAL = [
     false, false, false, false
 ];
 
+const ERROR_GAME_IN_PROGRESS = {
+    all: "Game in Progress"
+};
 
 export function countDropped(newSelection)
 {
@@ -105,6 +111,7 @@ class Game extends React.Component {
 
     state = {
         showCalculator: false,
+        showSettings: false,
         cardsSelection: null
     };
 
@@ -163,6 +170,7 @@ class Game extends React.Component {
     }
 
     toggleCalc = () => this.setState({ showCalculator: !this.state.showCalculator });
+    toggleSettings = () => this.setState({ showSettings: !this.state.showSettings });
 
     toggleCard = id =>this.setState( (prevState, props) => {
     
@@ -286,10 +294,14 @@ class Game extends React.Component {
         return legal.indexOf(true) < 0 ? ALL_LEGAL : legal;
     }
 
+    changeOptions = options => {
+        
+    }
+
     render()
     {
         const { match, currentChannel, userConfig, calculator, declareGame } = this.props;
-        const { showCalculator, cardsSelection } = this.state;
+        const { showCalculator, showSettings, cardsSelection } = this.state;
 
 
         if (!currentChannel)
@@ -508,12 +520,12 @@ class Game extends React.Component {
                                                     disabled={ isDeclaring }
                                                     className={
                                                         cx(
-                                                            "btn btn-success",
+                                                            "btn btn-success mr-1",
                                                             showCalculator && "active"
                                                         )
                                                     }
                                                     aria-label={
-                                                        "Toggle calculator"
+                                                        "Toggle Calculator Dialog"
                                                     }
                                                     onClick={
                                                         this.toggleCalc
@@ -523,9 +535,26 @@ class Game extends React.Component {
                                                         className="fa-calculator"
                                                     />
                                                 </button>
-                                                {
-                                                    "\u00a0"
-                                                }
+                                                <button
+                                                    type="button"
+                                                    disabled={ isDeclaring }
+                                                    className={
+                                                        cx(
+                                                            "btn btn-secondary mr-1",
+                                                            showSettings && "active"
+                                                        )
+                                                    }
+                                                    aria-label={
+                                                        "Toggle Settings Dialog"
+                                                    }
+                                                    onClick={
+                                                        this.toggleSettings
+                                                    }
+                                                >
+                                                    <Icon
+                                                        className="fa-cog"
+                                                    />
+                                                </button>
                                                 <UserToolbar/>
 
                                             </ButtonToolbar>
@@ -573,6 +602,40 @@ class Game extends React.Component {
                                                 </ButtonToolbar>
                                             </ModalBody>
                                         </Modal>
+                                        <Modal
+                                            isOpen={ showSettings && !isDeclaring }
+                                            toggle={ this.toggleSettings }
+                                            modalTransition={ { timeout: 75 }}
+                                            size="lg"
+                                        >
+                                            <ModalHeader toggle={ this.toggleSettings}>Options</ModalHeader>
+                                            <ModalBody>
+                                                <OptionsForm
+                                                    key={ currentChannel.id }
+                                                    phase={ phase }
+                                                    validate={(values, actions) => {
+                                                        if (phase !== "OPEN")
+                                                        {
+                                                            return ERROR_GAME_IN_PROGRESS
+                                                        }
+                                                        return null;
+                                                    }}
+                                                    value={ currentChannel.current.options }
+                                                    onSubmit={ this.changeOptions }
+                                                />
+                                                <ButtonToolbar>
+                                                    <button
+                                                        type="button"
+                                                        className="btn btn-primary"
+                                                        onClick={ this.toggleSettings }
+                                                    >
+                                                        {
+                                                            "Close"
+                                                        }
+                                                    </button>
+                                                </ButtonToolbar>
+                                            </ModalBody>
+                                        </Modal>
                                     </React.Fragment>
                                 );
                             }
@@ -597,6 +660,7 @@ const mapDispatchToProps = ({
     joinGame,
     storeCalculatorSettings,
     storeUserConfig,
+    storeOptions,
     pickUpSkat,
     declareGame,
     playCard

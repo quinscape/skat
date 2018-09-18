@@ -1,6 +1,9 @@
 package de.quinscape.domainql.skat.model.core;
 
+import de.quinscape.domainql.skat.runtime.SkatRuntimeException;
+
 public class GameOptions
+    implements Cloneable
 {
     // use default as configured in the service
     public static final String DEFAULT_SHUFFLING_STRATEGY_NAME = null;
@@ -61,5 +64,17 @@ public class GameOptions
     public void setShufflingStrategyName(String shufflingStrategyName)
     {
         this.shufflingStrategyName = shufflingStrategyName;
+    }
+
+    public GameOptions clone()
+    {
+        try
+        {
+            return (GameOptions) super.clone();
+        }
+        catch (CloneNotSupportedException e)
+        {
+            throw new SkatRuntimeException(e);
+        }
     }
 }

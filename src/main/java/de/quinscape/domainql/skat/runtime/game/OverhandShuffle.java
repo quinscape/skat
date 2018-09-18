@@ -64,6 +64,13 @@ public class OverhandShuffle
 
 
     @Override
+    public String describe()
+    {
+        return "OverhandShuffle(maxCards =  " + maxCards + ")";
+    }
+
+
+    @Override
     public String toString()
     {
         return super.toString() + ": "

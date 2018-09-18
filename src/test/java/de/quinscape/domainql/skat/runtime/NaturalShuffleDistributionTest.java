@@ -47,7 +47,6 @@ public class NaturalShuffleDistributionTest
     public void testDistribution()
     {
         Random random = new SecureRandom();
-        final GameOptions options = new GameOptions();
 
         List<GameUser> users = Arrays.asList(
             new GameUser("1253ce43-0d39-473a-9269-74a15e7a7dea", "user-a", GameUserType.TEST_USER, "aaa", true),
@@ -69,7 +68,7 @@ public class NaturalShuffleDistributionTest
                 random,
                 0,
                 initialDeck,
-                options
+                GameOptions.DEFAULT_OPTIONS
             );
             gameRound.setSeating(users);
             gameRound.setPhase(GamePhase.PLAYING);

@@ -1,17 +1,19 @@
-
 import intercept from "../util/intercept"
+
 
 const isDev = intercept(process.env.NODE_ENV !== "production") &&
     typeof Proxy === "function" &&
     typeof Object.freeze === "function";
 
-
 // default config without initConfig() call
 let config, frozenProxy;
 
-export function __initConfig(initial, keys = null )
+export function __initConfig(initial, keys = null)
 {
-    config = {};
+    config = {
+        names: []
+    };
+
 
     if (keys)
     {
@@ -19,6 +21,7 @@ export function __initConfig(initial, keys = null )
         {
             const name = keys[i];
             config[name] = initial[name];
+            config.names.push(name);
         }
     }
     else
@@ -28,6 +31,7 @@ export function __initConfig(initial, keys = null )
             if (initial.hasOwnProperty(name))
             {
                 config[name] = initial[name];
+                config.names.push(name);
             }
         }
     }
@@ -37,16 +41,18 @@ export function __initConfig(initial, keys = null )
         const frozen = require("deep-freeze")(config);
 
         frozenProxy = new Proxy(frozen, {
-            get: function(config, property) {
-                if (property in config) {
+            get: function (config, property) {
+                if (property in config)
+                {
                     return config[property];
-                } else {
+                }
+                else
+                {
                     throw new ReferenceError("Invalid config name '" + property + "'");
                 }
             }
         });
     }
-
 }
 
 /**
@@ -57,8 +63,7 @@ export function __initConfig(initial, keys = null )
  *
  * @return {*}
  */
-export default function()
-{
+export default function () {
     return isDev ? frozenProxy : config;
 }
 

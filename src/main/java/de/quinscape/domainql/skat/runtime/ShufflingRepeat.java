@@ -55,16 +55,15 @@ public final class ShufflingRepeat
     }
 
 
-    @Override
-    public String toString()
+    public String describe()
     {
-        if (minTimes != maxTimes)
+        if (minTimes == maxTimes)
         {
-            return this.getClass().getSimpleName() + ": " + minTimes + " times " + shufflingStrategy;
+            return minTimes + " times " + shufflingStrategy.describe();
         }
         else
         {
-            return this.getClass().getSimpleName() + ": " + minTimes + " to " + maxTimes + " times " + shufflingStrategy;
+            return minTimes + " to " + maxTimes + " times " + shufflingStrategy.describe();
         }
     }
 }

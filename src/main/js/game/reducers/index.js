@@ -3,7 +3,8 @@ import {
     GAME_ACTIVATE,
     PUSH_CHANNEL_UPDATE,
     HAND_REPLACE,
-    USER_CONFIG_UPDATE
+    USER_CONFIG_UPDATE,
+    OPTIONS_STORE
 } from "../actions";
 import { getCalculatorDefaults } from "../../components/calculator/Calculator";
 
@@ -102,10 +103,20 @@ export default function(state = null, action)
 
         case HAND_REPLACE:
 
-            return update(state,{
+            return update(state, {
                 currentChannel: {
                     current: {
                         hand: { $set: action.hand }
+                    }
+                }
+            });
+
+        case OPTIONS_STORE:
+
+            return update(state, {
+                currentChannel: {
+                    current: {
+                        options: { $set: action.options }
                     }
                 }
             });

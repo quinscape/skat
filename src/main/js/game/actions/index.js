@@ -1,6 +1,8 @@
 import { push } from "connected-react-router"
 import graphql, { defaultErrorHandler } from "../../services/graphql";
 
+
+
 export const SKAT_USER_NAME = "SKAT_USER_NAME";
 
 export const GAME_ACTIVATE = "GAME_UPDATE_ACTIVATE";
@@ -10,7 +12,25 @@ export const CALCULATOR_SETTINGS_STORE = "CALCULATOR_SETTINGS_STORE";
 export const PUSH_CHANNEL_UPDATE = "PUSH_CHANNEL_UPDATE";
 export const USER_CONFIG_UPDATE = "USER_CONFIG_UPDATE";
 export const HAND_REPLACE = "HAND_REPLACE";
+export const OPTIONS_STORE = "OPTIONS_STORE";
 
+export function storeOptions(options)
+{
+    return (dispatch, getState ) => {
+
+        const currentChannel = getCurrentChannel(getState());
+
+        if (currentChannel.current.phase !== "OPEN")
+        {
+            throw new Error("Game not in OPEN");
+        }
+
+        dispatch({
+            type: OPTIONS_STORE,
+            options
+        });
+    }
+}
 
 function updateErrorHandler(err)
 {

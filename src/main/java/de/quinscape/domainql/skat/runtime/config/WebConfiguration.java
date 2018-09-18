@@ -1,7 +1,11 @@
 package de.quinscape.domainql.skat.runtime.config;
 
+import de.quinscape.domainql.skat.runtime.game.ShufflingStrategy;
 import de.quinscape.domainql.skat.runtime.service.AppAuthentication;
+import de.quinscape.domainql.skat.runtime.service.ShufflingService;
+import de.quinscape.domainql.skat.runtime.service.ShufflingStrategyInfo;
 import de.quinscape.domainql.skat.util.Base32;
+import de.quinscape.domainql.skat.util.JSONWrapper;
 import de.quinscape.domainql.skat.ws.DefaultSkatClientConnection;
 import de.quinscape.domainql.skat.ws.SkatWebSocketHandler;
 import de.quinscape.domainql.preload.PreloadedGraphQLQueryProvider;
@@ -17,9 +21,10 @@ import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import javax.servlet.ServletContext;
+import java.util.stream.Collectors;
 
 @Configuration
-public class    WebConfiguration
+public class WebConfiguration
     implements WebMvcConfigurer
 {
 
@@ -31,13 +36,16 @@ public class    WebConfiguration
 
     private final SkatWebSocketHandler skatWebSocketHandler;
 
+    private final JSONWrapper shufflingStrategyInfos;
+
 
     @Autowired
     public WebConfiguration(
         ServletContext servletContext,
         GraphQLSchema graphQLSchema,
         ResourceLoader resourceLoader,
-        @Lazy SkatWebSocketHandler skatWebSocketHandler
+        @Lazy SkatWebSocketHandler skatWebSocketHandler,
+        ShufflingService shufflingService
     )
     {
         this.servletContext = servletContext;
@@ -46,8 +54,20 @@ public class    WebConfiguration
 
         this.skatWebSocketHandler = skatWebSocketHandler;
 
+        final ShufflingStrategy defaultStrategy = shufflingService.getStrategy(null);
 
-
+        shufflingStrategyInfos = JSONWrapper.wrap(
+            shufflingService.getStrategyNames().stream()
+            .map(
+                name -> {
+                    final ShufflingStrategy strategy = shufflingService.getStrategy(name);
+                    return new ShufflingStrategyInfo(name, strategy, strategy == defaultStrategy);
+                }
+            )
+            .collect(
+                Collectors.toList()
+            )
+        );
     }
 
 
@@ -78,7 +98,7 @@ public class    WebConfiguration
                     ctx.provideViewData("authentication", auth);
                     ctx.provideViewData("csrfToken", new ClientCrsfToken(token));
 
-
+                    ctx.provideViewData("shufflingStrategies", shufflingStrategyInfos);
 
                     final String connectionId = Base32.uuid();
                     ctx.provideViewData("connectionId", connectionId);

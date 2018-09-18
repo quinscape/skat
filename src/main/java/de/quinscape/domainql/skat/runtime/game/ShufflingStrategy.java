@@ -9,4 +9,6 @@ import java.util.Random;
 public interface ShufflingStrategy
 {
     List<Integer> shuffle(Random random, List<Integer> cards);
+
+    String describe();
 }

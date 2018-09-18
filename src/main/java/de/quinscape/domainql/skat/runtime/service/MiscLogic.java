@@ -1,12 +1,12 @@
 package de.quinscape.domainql.skat.runtime.service;
 
-import de.quinscape.domainql.skat.domain.tables.pojos.UserConfig;
-import de.quinscape.domainql.skat.domain.tables.records.UserConfigRecord;
-import de.quinscape.domainql.skat.ws.SkatWebSocketHandler;
 import de.quinscape.domainql.annotation.GraphQLLogic;
 import de.quinscape.domainql.annotation.GraphQLMutation;
 import de.quinscape.domainql.annotation.GraphQLQuery;
 import de.quinscape.domainql.skat.domain.Tables;
+import de.quinscape.domainql.skat.domain.tables.pojos.UserConfig;
+import de.quinscape.domainql.skat.domain.tables.records.UserConfigRecord;
+import de.quinscape.domainql.skat.ws.SkatWebSocketHandler;
 import org.jooq.DSLContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,9 +17,9 @@ import java.util.Random;
 import java.util.UUID;
 
 @GraphQLLogic
-public class UserLogic
+public class MiscLogic
 {
-    private final static Logger log = LoggerFactory.getLogger(UserLogic.class);
+    private final static Logger log = LoggerFactory.getLogger(MiscLogic.class);
 
     private final DSLContext dslContext;
 
@@ -31,7 +31,7 @@ public class UserLogic
 
 
     @Autowired
-    public UserLogic(
+    public MiscLogic(
         DSLContext dslContext,
         ChannelRepository channelRepository,
         Random random,
@@ -94,4 +94,5 @@ public class UserLogic
 
         return userConfigRecord.into(UserConfig.class);
     }
+
 }

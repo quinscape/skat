@@ -104,11 +104,17 @@ public class InMemoryChannelRepository
                     channel.setUsers(newUsers);
                     preparedMessages = channel.prepareUpdate(
                         null,
-                        LogEntry.action(
-                            Util.joinWithComma(removed),
-                            " left the channel."
-                        )
+                        (LogEntry[]) null
                     );
+
+//                    preparedMessages = channel.prepareUpdate(
+//                        null,
+//                        LogEntry.action(
+//                            Util.joinWithComma(removed),
+//                            " left the channel."
+//                        )
+//                    );
+
                 }
             } // end lock
 

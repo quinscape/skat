@@ -22,6 +22,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
@@ -148,12 +149,8 @@ public class ChannelLogic
                         GameUser currentUser = users.get(i);
 
                         // if the current user is inactive and equal to us
-                        final boolean currentIsTest = currentUser.getType() == GameUserType.TEST_USER;
-                        final boolean newIsTest = newUser.getType() == GameUserType.TEST_USER;
                         if (
-                            !currentUser.isActive() && (
-                                currentUser.equals(newUser) || (currentIsTest && newIsTest)
-                            )
+                            !currentUser.isActive() && currentUser.getName().equals(newUser.getName())
                         )
                         {
                             // we replace them in "users"..
@@ -197,8 +194,14 @@ public class ChannelLogic
 
                     preparedMessages = channel.prepareUpdate(
                         newUser,
-                        LogEntry.action(newUser.getName(),  "joined the channel")
+                        (LogEntry[]) null
                     );
+
+//                    preparedMessages = channel.prepareUpdate(
+//                        newUser,
+//                        LogEntry.action(newUser.getName(),  "joined the channel")
+//                    );
+
 
                     final Channel minimized = channel.getMinimizedCopy();
                     minimized.getLogEntries().addAll(channel.getLogEntries());

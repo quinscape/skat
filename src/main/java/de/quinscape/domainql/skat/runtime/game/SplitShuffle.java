@@ -49,6 +49,14 @@ public class SplitShuffle
         return copy;
     }
 
+
+    @Override
+    public String describe()
+    {
+        return "SplitShuffle(variance = " + variance + ")";
+    }
+
+
     static int getSplit(Random random, double variance)
     {
         return (int) (16 * (1 + variance/2 +  random.nextDouble() * variance));

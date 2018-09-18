@@ -10,7 +10,7 @@ import FormConfigProvider from "domainql-form/lib/FormConfigProvider"
 import storeFactory from "../services/storeFactory"
 import createHistory from "history/createBrowserHistory";
 import SkatCardsGame from "./SkatCardsGame";
-import config, { __initConfig } from "../services/config";
+import _config, { __initConfig } from "../services/config";
 
 import { Provider } from "react-redux"
 import loader from "../services/loader";
@@ -25,11 +25,11 @@ bootstrap(
 
         console.info("INITIAL DATA", initial);
 
-        __initConfig(initial, ["contextPath", "authentication", "csrfToken", "connectionId"]);
+        __initConfig(initial, ["contextPath", "authentication", "csrfToken", "connectionId", "shufflingStrategies"]);
 
         // We need to tell webpack from where to load dynamically imported modules
         // noinspection JSUnresolvedVariable
-        __webpack_public_path__ = config().contextPath + "/js/";
+        __webpack_public_path__ = _config().contextPath + "/js/";
 
         _store = storeFactory(
             rootReducer,
@@ -91,6 +91,16 @@ export function store()
 export function state()
 {
     return _store.getState();
+}
+
+/**
+ * Export config service
+ * 
+ * @return {*}
+ */
+export function config()
+{
+    return _config();
 }
 
 export const PRELOADED_QUERIES = {

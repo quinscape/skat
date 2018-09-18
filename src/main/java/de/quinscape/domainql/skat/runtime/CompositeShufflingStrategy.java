@@ -92,7 +92,24 @@ public class CompositeShufflingStrategy
     public String toString()
     {
         return super.toString() + ":\n  "
-            + Util.join(strategies, "\n  ") + "\n"
+            + describe()
             ;
+    }
+
+
+    public String describe()
+    {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < strategies.size(); i++)
+        {
+            if (i > 0)
+            {
+                sb.append(", then ");
+            }
+            ShufflingRepeat repeat = strategies.get(i);
+            sb.append(repeat.describe());
+        }
+        sb.append("\n");
+        return sb.toString();
     }
 }

@@ -37,7 +37,7 @@ public class GameRound
 
     private GamePhase phase = GamePhase.OPEN;
 
-    private GameOptions options = new GameOptions();
+    private GameOptions options = GameOptions.DEFAULT_OPTIONS;
 
     private int currentDealer;
 

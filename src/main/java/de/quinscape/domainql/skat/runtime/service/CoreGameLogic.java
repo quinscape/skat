@@ -65,7 +65,7 @@ public class CoreGameLogic
         log.debug("Shuffling using {}", strategy);
 
 
-        final GameRound gameRound = GameRound.shuffleDeck(strategy, random, 0, Cards.INITIAL_DECK, new GameOptions());
+        final GameRound gameRound = GameRound.shuffleDeck(strategy, random, 0, Cards.INITIAL_DECK, GameOptions.DEFAULT_OPTIONS);
 
         log.debug("First round: {}", gameRound);
 

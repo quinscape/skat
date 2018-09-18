@@ -148,11 +148,18 @@ public class Channel
     {
         log.debug("Preparing update: {} (exclude = {})", description, exclude);
 
-        List<LogEntry> messages = Arrays.asList(description);
-
-        this.getLogEntries().addAll(messages);
+        final boolean haveMessages = description != null && description.length > 0;
+        List<LogEntry> messages = null;
+        if (haveMessages)
+        {
+            messages = Arrays.asList(description);
+            this.getLogEntries().addAll(messages);
+        }
         final Channel minimized = this.getMinimizedCopy();
-        minimized.getLogEntries().addAll(messages);
+        if (haveMessages)
+        {
+            minimized.getLogEntries().addAll(messages);
+        }
 
         return minimized.prepareUpdate(usersExcluding(exclude));
     }

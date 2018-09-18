@@ -23,11 +23,13 @@ public class RiffleShuffle
     {
         this(SplitShuffle.DEFAULT_VARIANCE);
     }
-    
+
+
     public RiffleShuffle(double variance)
     {
         this.variance = variance;
     }
+
 
     @Override
     public List<Integer> shuffle(Random random, List<Integer> cards)
@@ -43,34 +45,41 @@ public class RiffleShuffle
         int indexB = split;
 
         boolean flag = random.nextBoolean();
-        for (int i=0; i < cards.size(); i++)
+        for (int i = 0; i < cards.size(); i++)
         {
             if (flag)
             {
                 if (indexA < cards.size())
                 {
-                    copy.add( cards.get(indexA++));
+                    copy.add(cards.get(indexA++));
                 }
                 else
                 {
-                    copy.add( cards.get(indexB++));
+                    copy.add(cards.get(indexB++));
                 }
             }
             else
             {
                 if (indexB < cards.size())
                 {
-                    copy.add( cards.get(indexB++));
+                    copy.add(cards.get(indexB++));
                 }
                 else
                 {
-                    copy.add( cards.get(indexA++));
+                    copy.add(cards.get(indexA++));
                 }
             }
 
             flag = !flag;
         }
         return copy;
+    }
+
+
+    @Override
+    public String describe()
+    {
+        return "RiffleShuffle(variance =  " + variance + ")";
     }
 
 

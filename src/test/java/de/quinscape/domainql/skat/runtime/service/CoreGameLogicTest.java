@@ -86,8 +86,13 @@ public class CoreGameLogicTest
 
     private void newGameRound(int currentDealer)
     {
-        final GameRound current = GameRound.shuffleDeck(NeutralShuffle.INSTANCE, random, currentDealer, TestCards.SORTED_DECK,
-            new GameOptions());
+        final GameRound current = GameRound.shuffleDeck(
+            NeutralShuffle.INSTANCE,
+            random,
+            currentDealer,
+            TestCards.SORTED_DECK,
+            GameOptions.DEFAULT_OPTIONS
+        );
         current.setSeating(channel.getUsers());
         channel.setCurrent(current);
 

@@ -23,4 +23,11 @@ public class NeutralShuffle
     {
         return cards;
     }
+
+
+    @Override
+    public String describe()
+    {
+        return "NeutralShuffle";
+    }
 }

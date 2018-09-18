@@ -131,14 +131,7 @@ public class GameUser
             return false;
         }
 
-        if (type == GameUserType.TEST_USER)
-        {
-            return connectionId.equals(that.connectionId);
-        }
-        else
-        {
-            return name.equals(that.name);
-        }
+        return name.equals(that.name);
     }
 
 
@@ -152,14 +145,7 @@ public class GameUser
     public int hashCode()
     {
         int result = type.hashCode();
-        if (type == GameUserType.TEST_USER)
-        {
-            result = 31 * result + connectionId.hashCode();
-        }
-        else
-        {
-            result = 31 * result + name.hashCode();
-        }
+        result = 31 * result + name.hashCode();
         return result;
     }
 

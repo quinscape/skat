@@ -27,6 +27,13 @@ public class TestShuffle
     }
 
 
+    @Override
+    public String describe()
+    {
+        return "TestShuffle";
+    }
+
+
     private List<Integer> shuffle(List<Integer> cards)
     {
         final ArrayList<Integer> list = new ArrayList<>(cards.size());
